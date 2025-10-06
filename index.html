@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Duna Tech - Ingenio que Construye, Data que Impulsa</title>
+    <meta name="description" content="A futuristic 'Coming Soon' landing page for Duna Tech, showcasing their services, philosophy, and a countdown to launch." />
+    <meta name="keywords" content="Duna Tech, coming soon, landing page, software development, tech consulting, cloud solutions, innovation, technology" />
+    <meta name="author" content="Duna Tech" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#FF9500",
+                        "background-light": "#F5F5DC",
+                        "background-dark": "#1A2332",
+                        "text-light": "#0E294B",
+                        "text-dark": "#F5F5DC",
+                        "light-blue": "#4FC3F7",
+                        "light-green": "#6EE7B7",
+                        "dark-blue": "#0E294B",
+                        "error-red": "#EF5350",
+                        "gris-grafito": "#6B6B6B",
+                    },
+                    fontFamily: {
+                        display: ["Space Grotesk", "sans-serif"],
+                        body: ['Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif'],
+                        heading: ['Orbitron', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        lg: "0.75rem",
+                        xl: "1rem",
+                        full: "9999px",
+                    },
+                    keyframes: {
+                        glitch: {
+                            '0%, 100%': { transform: 'translate(0)' },
+                            '20%': { transform: 'translate(-3px, 3px)' },
+                            '40%': { transform: 'translate(-3px, -3px)' },
+                            '60%': { transform: 'translate(3px, 3px)' },
+                            '80%': { transform: 'translate(3px, -3px)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideIn: {
+                            '0%': { transform: 'translateX(20px)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' },
+                        },
+                        gradientWave: {
+                            '0%': { backgroundPosition: '0% 50%', opacity: '0.8' },
+                            '50%': { backgroundPosition: '100% 50%', opacity: '1' },
+                            '100%': { backgroundPosition: '0% 50%', opacity: '0.8' },
+                        },
+                        glow: {
+                            '0%, 100%': { textShadow: '0 0 5px rgba(255, 149, 0, 0.4), 0 0 10px rgba(255, 149, 0, 0.3), 0 0 15px rgba(255, 149, 0, 0.2)' },
+                            '50%': { textShadow: '0 0 10px rgba(255, 149, 0, 0.6), 0 0 20px rgba(255, 149, 0, 0.4), 0 0 30px rgba(255, 149, 0, 0.3)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        slideInUp: {
+                            '0%': { transform: 'translateY(100%)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        fadeOut: {
+                           '0%': { opacity: '1' },
+                           '100%': { opacity: '0' }
+                        }
+                    },
+                    animation: {
+                        glitch: 'glitch 0.3s linear infinite',
+                        fadeIn: 'fadeIn 0.5s ease-in-out',
+                        slideIn: 'slideIn 0.5s ease-in-out',
+                        gradientWave: 'gradientWave 25s ease infinite',
+                        glow: 'glow 4s ease-in-out infinite',
+                        float: 'float 6s ease-in-out infinite',
+                        slideInUp: 'slideInUp 0.5s ease-out forwards',
+                        fadeOut: 'fadeOut 0.5s ease-out forwards'
+                    }
+                },
+            },
+        };
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .hud-overlay {
+            position: relative;
+            border: 1px solid rgba(255, 149, 0, 0.2);
+            box-shadow: 0 0 15px rgba(255, 149, 0, 0.1);
+        }
+        .hud-overlay::before, .hud-overlay::after {
+            content: '';
+            position: absolute;
+            width: 1rem;
+            height: 1rem;
+            border-color: #FF9500;
+            border-style: solid;
+        }
+        .hud-overlay.error {
+             border-color: rgba(239, 83, 80, 0.4);
+             box-shadow: 0 0 15px rgba(239, 83, 80, 0.2);
+        }
+         .hud-overlay.error::before, .hud-overlay.error::after {
+             border-color: #EF5350;
+         }
+        .hud-overlay::before {
+            top: -2px;
+            left: -2px;
+            border-width: 2px 0 0 2px;
+        }
+        .hud-overlay::after {
+            bottom: -2px;
+            right: -2px;
+            border-width: 0 2px 2px 0;
+        }
+        .form-input {
+            transition: all 0.3s ease-in-out;
+        }
+        .form-input:focus {
+            border-color: #FF9500;
+            box-shadow: 0 0 0 2px rgba(255, 149, 0, 0.4);
+            transform: translateY(-2px);
+        }
+        .form-input.invalid {
+            border-color: #EF5350;
+            box-shadow: 0 0 0 2px rgba(239, 83, 80, 0.4);
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@6.25.1",
+    "react-router": "https://aistudiocdn.com/react-router@6.25.1"
+  }
+}
+</script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-body text-text-light dark:text-text-dark">
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+</body>
+</html>
