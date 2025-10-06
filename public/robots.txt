@@ -1,0 +1,91 @@
+# robots.txt para Dunatech
+# Última actualización: 2025-01-06
+
+# Permitir acceso a todos los bots
+User-agent: *
+Allow: /
+
+# Páginas principales que queremos indexar
+Allow: /sobre-nosotros
+Allow: /servicios
+Allow: /aplicaciones
+Allow: /contacto
+
+# Bloquear acceso a archivos y directorios de desarrollo
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /api/
+Disallow: /*.log$
+
+# Bloquear parámetros de búsqueda innecesarios
+Disallow: /*?*utm_source=
+Disallow: /*?*utm_medium=
+Disallow: /*?*utm_campaign=
+Disallow: /*?*ref=
+Disallow: /*?session_id=
+
+# Permitir acceso a recursos estáticos
+Allow: /assets/
+Allow: /*.css
+Allow: /*.js
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.png
+Allow: /*.svg
+Allow: /*.webp
+Allow: /*.gif
+Allow: /*.woff
+Allow: /*.woff2
+
+# Google Bot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Google Image Bot
+User-agent: Googlebot-Image
+Allow: /
+
+# Bing Bot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Yandex Bot
+User-agent: Yandex
+Allow: /
+Crawl-delay: 2
+
+# Baidu Bot (importante para mercados asiáticos)
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+# DuckDuckGo Bot
+User-agent: DuckDuckBot
+Allow: /
+
+# Bloquear bots maliciosos comunes
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+# Sitemap locations
+Sitemap: https://dunatech.com/sitemap.xml
+Sitemap: https://dunatech.com/sitemap-pages.xml
+Sitemap: https://dunatech.com/sitemap-images.xml
+
+# Host (preferencia de dominio)
+Host: https://dunatech.com

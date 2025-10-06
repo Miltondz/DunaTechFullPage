@@ -1,20 +1,41 @@
 
 import React, { useEffect } from 'react';
 import Hero from '../components/Hero';
+import HeroImage from '../components/HeroImage';
 import Teasers from '../components/Teasers';
+import Testimonials from '../components/Testimonials';
 import Carousel from '../components/Carousel';
 
 const HomePage: React.FC = () => {
     useEffect(() => {
-        document.title = 'Dunatech - Inicio';
+        // SEO: Descriptive title
+        document.title = 'Dunatech - Soluciones Tecnológicas Innovadoras | Desarrollo Web & Consultoría IT';
+        
+        // SEO: Meta description
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+            metaDescription.setAttribute('content', 'Transformamos desafíos tecnológicos en oportunidades de crecimiento. Servicios de desarrollo web, arquitectura de sistemas, bases de datos y consultoría IT en República Dominicana.');
+        }
     }, []);
+    
     return (
         <>
+            {/* Hero Section - Primera impresión crítica para engagement */}
             <Hero />
+            
+            {/* Hero Image - Visual impactante que refuerza el mensaje */}
+            <HeroImage />
+            
+            {/* Teasers/Preview Section - Vistazo al Futuro */}
             <section className="py-24 sm:py-32 flex justify-center bg-background-dark/30">
                 <Teasers />
             </section>
-             <section className="py-24 sm:py-32 flex justify-center">
+            
+            {/* Testimonials - Social Proof para generar confianza */}
+            <Testimonials />
+            
+            {/* Domains/Services Carousel - Exploración de servicios */}
+            <section className="py-24 sm:py-32 flex justify-center">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="max-w-6xl mx-auto">
                          <div className="text-center mb-16">
