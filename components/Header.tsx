@@ -40,7 +40,17 @@ const Header: React.FC = () => {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center py-4">
                     <Link to="/" className="flex items-center space-x-3">
-                        <div className="w-10 h-10 bg-primary/80 rounded-lg flex items-center justify-center">
+                        <img 
+                            src="/logo_dunatech.svg" 
+                            alt="Dunatech Logo" 
+                            className="w-10 h-10"
+                            onError={(e) => {
+                                // Fallback if logo doesn't exist
+                                e.currentTarget.style.display = 'none';
+                                e.currentTarget.parentElement?.querySelector('.logo-fallback')?.classList.remove('hidden');
+                            }}
+                        />
+                        <div className="logo-fallback hidden w-10 h-10 bg-primary/80 rounded-lg flex items-center justify-center">
                             <span className="material-symbols-outlined text-white text-2xl">layers</span>
                         </div>
                         <div>

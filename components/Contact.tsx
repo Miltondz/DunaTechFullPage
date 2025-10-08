@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 
 interface ContactProps {
     onFormSubmit: () => void;
@@ -18,11 +19,14 @@ const InfoItem: React.FC<{ icon: string; title: string; children: React.ReactNod
 );
 
 const Contact: React.FC<ContactProps> = ({ onFormSubmit }) => {
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        onFormSubmit();
-        e.currentTarget.reset();
-    };
+    const [state, handleSubmit] = useForm("mwprnoja");
+    
+    // Show success message after form submission
+    React.useEffect(() => {
+        if (state.succeeded) {
+            onFormSubmit();
+        }
+    }, [state.succeeded, onFormSubmit]);
 
     return (
         <section className="pb-24 sm:pb-32 bg-background-dark/30">
@@ -42,13 +46,13 @@ const Contact: React.FC<ContactProps> = ({ onFormSubmit }) => {
                             <h3 className="text-2xl font-bold text-text-dark mb-6 font-display">Información de Contacto</h3>
                             <div className="space-y-6">
                                 <InfoItem icon="location_on" title="Ubicación">
-                                    <p>Santiago, República Dominicana</p>
+                                    <p>Santiago, Región Metropolitana, Chile</p>
                                 </InfoItem>
                                 <InfoItem icon="mail" title="Email">
-                                    <p>info@dunatech.com</p>
+                                    <p>dunatech.site@gmail.com</p>
                                 </InfoItem>
                                 <InfoItem icon="call" title="Teléfono">
-                                    <p>+1 (809) 123-4567</p>
+                                    <p>+1 (555) 123-4567</p>
                                 </InfoItem>
                                 <InfoItem icon="schedule" title="Horario">
                                     <p>Lunes - Viernes: 8:00 AM - 6:00 PM</p>
@@ -62,17 +66,38 @@ const Contact: React.FC<ContactProps> = ({ onFormSubmit }) => {
                             <form className="space-y-6" onSubmit={handleSubmit}>
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div>
-                                        <label className="sr-only">Nombre</label>
-                                        <input type="text" className="form-input w-full bg-transparent dark:bg-background-dark/50 border border-primary/30 rounded-md py-3 px-4 text-text-dark placeholder-text-dark/50 focus:ring-0" placeholder="Tu nombre" required />
+                                        <label htmlFor="name" className="sr-only">Nombre</label>
+                                        <input 
+                                            id="name"
+                                            type="text" 
+                                            name="name"
+                                            className="form-input w-full bg-transparent dark:bg-background-dark/50 border border-primary/30 rounded-md py-3 px-4 text-text-dark placeholder-text-dark/50 focus:ring-0" 
+                                            placeholder="Tu nombre" 
+                                            required 
+                                        />
+                                        <ValidationError prefix="Name" field="name" errors={state.errors} />
                                     </div>
                                     <div>
-                                        <label className="sr-only">Email</label>
-                                        <input type="email" className="form-input w-full bg-transparent dark:bg-background-dark/50 border border-primary/30 rounded-md py-3 px-4 text-text-dark placeholder-text-dark/50 focus:ring-0" placeholder="tu@email.com" required />
+                                        <label htmlFor="email" className="sr-only">Email</label>
+                                        <input 
+                                            id="email"
+                                            type="email" 
+                                            name="email"
+                                            className="form-input w-full bg-transparent dark:bg-background-dark/50 border border-primary/30 rounded-md py-3 px-4 text-text-dark placeholder-text-dark/50 focus:ring-0" 
+                                            placeholder="tu@email.com" 
+                                            required 
+                                        />
+                                        <ValidationError prefix="Email" field="email" errors={state.errors} />
                                     </div>
                                 </div>
                                 <div>
-                                    <label className="sr-only">Tipo de Proyecto</label>
-                                    <select className="form-input w-full bg-transparent dark:bg-background-dark/50 border border-primary/30 rounded-md py-3 px-4 text-text-dark placeholder-text-dark/50 focus:ring-0" required>
+                                    <label htmlFor="project-type" className="sr-only">Tipo de Proyecto</label>
+                                    <select 
+                                        id="project-type"
+                                        name="project-type"
+                                        className="form-input w-full bg-transparent dark:bg-background-dark/50 border border-primary/30 rounded-md py-3 px-4 text-text-dark placeholder-text-dark/50 focus:ring-0" 
+                                        required
+                                    >
                                         <option className="bg-background-dark" value="">Seleccionar tipo de proyecto</option>
                                         <option className="bg-background-dark" value="web">Desarrollo Web</option>
                                         <option className="bg-background-dark" value="db">Bases de Datos</option>
@@ -80,14 +105,27 @@ const Contact: React.FC<ContactProps> = ({ onFormSubmit }) => {
                                         <option className="bg-background-dark" value="consulting">Consultoría IT</option>
                                         <option className="bg-background-dark" value="other">Otro</option>
                                     </select>
+                                    <ValidationError prefix="Project Type" field="project-type" errors={state.errors} />
                                 </div>
                                 <div>
-                                    <label className="sr-only">Mensaje</label>
-                                    <textarea rows={4} className="form-input w-full bg-transparent dark:bg-background-dark/50 border border-primary/30 rounded-md py-3 px-4 text-text-dark placeholder-text-dark/50 focus:ring-0" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
+                                    <label htmlFor="message" className="sr-only">Mensaje</label>
+                                    <textarea 
+                                        id="message"
+                                        name="message"
+                                        rows={4} 
+                                        className="form-input w-full bg-transparent dark:bg-background-dark/50 border border-primary/30 rounded-md py-3 px-4 text-text-dark placeholder-text-dark/50 focus:ring-0" 
+                                        placeholder="Cuéntanos sobre tu proyecto..." 
+                                        required
+                                    ></textarea>
+                                    <ValidationError prefix="Message" field="message" errors={state.errors} />
                                 </div>
-                                <button type="submit" className="w-full bg-primary text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-light-blue hover:tracking-widest">
+                                <button 
+                                    type="submit" 
+                                    disabled={state.submitting}
+                                    className="w-full bg-primary text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-light-blue hover:tracking-widest disabled:opacity-50 disabled:cursor-not-allowed"
+                                >
                                     <span className="material-symbols-outlined align-middle mr-2">send</span>
-                                    Enviar Mensaje
+                                    {state.submitting ? 'Enviando...' : 'Enviar Mensaje'}
                                 </button>
                             </form>
                         </div>
