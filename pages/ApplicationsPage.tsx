@@ -5,18 +5,18 @@ import Applications from '../components/Applications';
 const ApplicationsPage: React.FC = () => {
     useEffect(() => {
         // SEO: Page title
-        document.title = 'Aplicaciones y Productos - Dunatech | Software Personalizado';
+        document.title = 'Aplicaciones y Productos de Software a Medida | Soluciones SaaS - Dunatech';
         
         // SEO: Meta description
         const metaDescription = document.querySelector('meta[name="description"]');
         if (metaDescription) {
-            metaDescription.setAttribute('content', 'Descubre nuestras aplicaciones y productos de software. Soluciones personalizadas que resuelven problemas reales y automatizan procesos empresariales.');
+            metaDescription.setAttribute('content', 'Descubre nuestras aplicaciones y productos de software a medida: sistemas de gestión empresarial, soluciones SaaS personalizadas, herramientas digitales para pymes y software empresarial que automatizan procesos. Desarrollo personalizado en Chile.');
         }
         
         // SEO: Meta keywords
         const metaKeywords = document.querySelector('meta[name="keywords"]');
         if (metaKeywords) {
-            metaKeywords.setAttribute('content', 'aplicaciones dunatech, productos software, soluciones empresariales, software personalizado, aplicaciones web, SaaS, herramientas digitales');
+            metaKeywords.setAttribute('content', 'aplicaciones dunatech, productos software a medida, software personalizado Chile, soluciones empresariales, aplicaciones web personalizadas, desarrollo SaaS Chile, herramientas digitales para pymes, software empresarial, sistemas de gestión a medida, aplicaciones móviles empresariales, plataformas SaaS personalizadas, automatización de procesos, software para retail, software para servicios, soluciones tecnológicas personalizadas');
         }
         
         // SEO: Open Graph
@@ -26,7 +26,7 @@ const ApplicationsPage: React.FC = () => {
             ogTitle.setAttribute('property', 'og:title');
             document.head.appendChild(ogTitle);
         }
-        ogTitle.setAttribute('content', 'Nuestras Aplicaciones y Productos de Software - Dunatech');
+        ogTitle.setAttribute('content', 'Aplicaciones y Productos Software a Medida | Soluciones SaaS - Dunatech');
         
         let ogDescription = document.querySelector('meta[property="og:description"]');
         if (!ogDescription) {
@@ -34,7 +34,7 @@ const ApplicationsPage: React.FC = () => {
             ogDescription.setAttribute('property', 'og:description');
             document.head.appendChild(ogDescription);
         }
-        ogDescription.setAttribute('content', 'Explora nuestro catálogo de aplicaciones y productos de software diseñados para impulsar la eficiencia de tu negocio.');
+        ogDescription.setAttribute('content', 'Catálogo de aplicaciones y productos software a medida en Chile: sistemas de gestión empresarial, soluciones SaaS personalizadas y herramientas digitales que impulsan la eficiencia de pymes.');
         
         // SEO: Canonical URL
         let canonical = document.querySelector('link[rel="canonical"]');

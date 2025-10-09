@@ -1,0 +1,42 @@
+{
+  "name": "Dunatech - Desarrollo de Software en Chile",
+  "short_name": "Dunatech",
+  "description": "Empresa de desarrollo de software y consultoría IT en Santiago, Chile. Especializada en arquitectura de bases de datos, desarrollo web, integración de sistemas y soluciones cloud.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1A2332",
+  "theme_color": "#FF9500",
+  "orientation": "portrait-primary",
+  "lang": "es-CL",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/logo_dunatech.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "business",
+    "productivity",
+    "utilities"
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Servicios",
+      "short_name": "Servicios",
+      "description": "Ver nuestros servicios de desarrollo",
+      "url": "/servicios",
+      "icons": []
+    },
+    {
+      "name": "Contacto",
+      "short_name": "Contacto",
+      "description": "Contáctanos para tu proyecto",
+      "url": "/contacto",
+      "icons": []
+    }
+  ]
+}

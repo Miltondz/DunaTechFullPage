@@ -8,13 +8,30 @@ import Carousel from '../components/Carousel';
 
 const HomePage: React.FC = () => {
     useEffect(() => {
-        // SEO: Descriptive title
-        document.title = 'Dunatech - Soluciones Tecnológicas Innovadoras | Desarrollo Web & Consultoría IT';
+        // SEO: Descriptive title optimized for Chile
+        document.title = 'Dunatech - Fábrica de Software a Medida Chile | Desarrollo + Consultoría TI';
         
-        // SEO: Meta description
+        // SEO: Meta description with local keywords
         const metaDescription = document.querySelector('meta[name="description"]');
         if (metaDescription) {
-            metaDescription.setAttribute('content', 'Transformamos desafíos tecnológicos en oportunidades de crecimiento. Servicios de desarrollo web, arquitectura de sistemas, bases de datos y consultoría IT en República Dominicana.');
+            metaDescription.setAttribute('content', 'Empresa joven de desarrollo de software a medida en Santiago, Chile. Fábrica de software especializada en aplicaciones web, móviles, integración de sistemas ERP/CRM y consultoría informática para pymes. Metodologías ágiles, +50 proyectos exitosos.');
+        }
+        
+        // SEO: Keywords meta
+        const metaKeywords = document.querySelector('meta[name="keywords"]');
+        if (metaKeywords) {
+            metaKeywords.setAttribute('content', 'desarrollo de software a medida, fábrica de software Chile, empresa joven desarrollo software, desarrollo aplicaciones web Chile, desarrollo apps móviles Santiago, software a medida para empresas, consultoría informática Santiago, soluciones TI para pymes, integración de sistemas empresariales, sistemas ERP personalizados, integración CRM ERP, consultoría tecnológica, transformación digital Chile, migración a la nube Santiago, cloud computing AWS Azure, desarrollo con metodologías ágiles, integración de APIs Chile, automatización procesos RPA, Dunatech Santiago');
+        }
+        
+        // SEO: Open Graph
+        let ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) {
+            ogTitle.setAttribute('content', 'Dunatech - Fábrica de Software a Medida en Chile | Soluciones TI');
+        }
+        
+        let ogDescription = document.querySelector('meta[property="og:description"]');
+        if (ogDescription) {
+            ogDescription.setAttribute('content', 'Empresa joven de desarrollo software en Santiago. Soluciones TI personalizadas: apps web y móviles, integración de sistemas ERP/CRM, consultoría informática para pymes. Metodologías ágiles.');
         }
     }, []);
     

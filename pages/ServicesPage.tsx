@@ -5,18 +5,18 @@ import Services from '../components/Services';
 const ServicesPage: React.FC = () => {
     useEffect(() => {
         // SEO: Page title
-        document.title = 'Servicios de Desarrollo de Software y Consultoría IT - Dunatech';
+        document.title = 'Servicios de Desarrollo Software a Medida + Consultoría TI | Dunatech Chile';
         
         // SEO: Meta description
         const metaDescription = document.querySelector('meta[name="description"]');
         if (metaDescription) {
-            metaDescription.setAttribute('content', 'Servicios de arquitectura de bases de datos, desarrollo web, integración de sistemas y soluciones cloud. Optimiza tu infraestructura y automatiza procesos con tecnología de vanguardia.');
+            metaDescription.setAttribute('content', 'Servicios de desarrollo de software a medida en Chile: aplicaciones web y móviles, sistemas ERP personalizados, integración de APIs, migración a la nube AWS/Azure, consultoría informática y transformación digital para pymes. Metodologías ágiles, soporte 24/7.');
         }
         
-        // SEO: Meta keywords
+        // SEO: Meta keywords with Chile location
         const metaKeywords = document.querySelector('meta[name="keywords"]');
         if (metaKeywords) {
-            metaKeywords.setAttribute('content', 'servicios desarrollo software, arquitectura bases datos SQL, desarrollo aplicaciones web, integración sistemas ERP, soluciones cloud azure aws, devops, consultoría IT');
+            metaKeywords.setAttribute('content', 'servicios desarrollo software a medida, desarrollo aplicaciones web Chile, desarrollo apps móviles Santiago, software a medida para empresas, sistemas ERP personalizados, consultoría informática Santiago, consultoría tecnológica para empresas, integración de sistemas empresariales, integración de APIs Chile, integración CRM ERP, migración a la nube Santiago, cloud computing AWS Azure Chile, DevOps automatización, transformación digital pymes, auditoría de sistemas, optimización procesos TI, soluciones TI para pymes Chile, integración SaaS personalizada, conectar sistemas legacy, desarrollo con metodologías ágiles');
         }
         
         // SEO: Open Graph
@@ -26,7 +26,7 @@ const ServicesPage: React.FC = () => {
             ogTitle.setAttribute('property', 'og:title');
             document.head.appendChild(ogTitle);
         }
-        ogTitle.setAttribute('content', 'Servicios IT: Desarrollo, Bases de Datos, Integración y Cloud - Dunatech');
+        ogTitle.setAttribute('content', 'Servicios de Software a Medida: Desarrollo, Integración y Consultoría TI - Dunatech');
         
         let ogDescription = document.querySelector('meta[property="og:description"]');
         if (!ogDescription) {
@@ -34,7 +34,7 @@ const ServicesPage: React.FC = () => {
             ogDescription.setAttribute('property', 'og:description');
             document.head.appendChild(ogDescription);
         }
-        ogDescription.setAttribute('content', 'Transforma tu negocio con nuestros servicios: optimización de BD, desarrollo web full-stack, integración de sistemas y migración a cloud.');
+        ogDescription.setAttribute('content', 'Transforma tu pyme con nuestros servicios: desarrollo software a medida, apps web y móviles, sistemas ERP personalizados, integración de APIs, consultoría informática y migración cloud AWS/Azure.');
         
         // SEO: Canonical URL
         let canonical = document.querySelector('link[rel="canonical"]');

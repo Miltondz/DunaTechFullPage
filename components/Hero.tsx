@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
                         {/* Trust Badge - Credibilidad inmediata */}
                         <div className="inline-flex items-center gap-2 bg-primary/20 backdrop-blur-sm px-4 py-2 rounded-full border border-primary/40 mb-6">
                             <span className="material-symbols-outlined text-primary text-lg">verified</span>
-                            <span className="text-text-dark text-sm font-display font-semibold">+50 Proyectos Exitosos · República Dominicana</span>
+                            <span className="text-text-dark text-sm font-display font-semibold">+50 Proyectos Exitosos · Empresa Joven en Chile</span>
                         </div>
 
                         {/* Propuesta de Valor Clara - "¿Qué hacemos?" */}
@@ -22,13 +22,13 @@ const Hero: React.FC = () => {
                         
                         {/* Subtítulo - Propuesta de valor específica */}
                         <p className="text-lg sm:text-xl md:text-2xl mb-6 text-light-blue font-display font-semibold">
-                            Desarrollo Web · Arquitectura de Sistemas · Consultoría IT
+                            Software a Medida · Integración de Sistemas · Consultoría Informática
                         </p>
                         
                         {/* "¿Es para mí?" - Identificación del cliente ideal */}
                         <p className="text-base md:text-lg mb-8 text-text-dark/90 max-w-3xl mx-auto font-body leading-relaxed">
-                            ¿Necesitas modernizar tu infraestructura tecnológica, desarrollar una aplicación web o escalar tu negocio?
-                            <span className="block mt-2 text-primary font-semibold">Somos tu partner estratégico en transformación digital.</span>
+                            Fábrica de software joven especializada en desarrollo a medida, integraciones y consultoría TI para pymes.
+                            <span className="block mt-2 text-primary font-semibold">Metodologías ágiles, tecnologías modernas y soporte 24/7.</span>
                         </p>
 
                         {/* CTAs Principales - "¿Qué debo hacer ahora?" */}

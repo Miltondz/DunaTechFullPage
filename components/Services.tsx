@@ -326,13 +326,13 @@ const Services: React.FC = () => {
                                     <span className="material-symbols-outlined mr-2">send</span>
                                     Solicitar Consultoría
                                 </Link>
-                                <a 
-                                    href="#" 
+                                <button 
+                                    onClick={() => alert('Brochure estará disponible próximamente')}
                                     className="inline-flex items-center justify-center border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-lg py-4 px-8 font-bold transition-all duration-300 hover:scale-105 text-lg"
                                 >
                                     <span className="material-symbols-outlined mr-2">download</span>
                                     Descargar Brochure
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </div>

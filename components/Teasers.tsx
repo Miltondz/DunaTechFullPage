@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const TeaserCard: React.FC<{ title: string; description: string; animationDelay: string; }> = ({ title, description, animationDelay }) => (
     <div
@@ -51,13 +52,13 @@ const Teasers: React.FC = () => {
                         <p className="text-text-dark font-display font-bold text-lg mb-1">¿Listo para Transformar tu Negocio?</p>
                         <p className="text-text-dark/70 text-sm">Agenda una consultoría gratuita y descubre cómo podemos ayudarte.</p>
                     </div>
-                    <a 
-                        href="/contacto" 
+                    <Link 
+                        to="/contacto" 
                         className="inline-flex items-center bg-primary text-white font-bold px-6 py-3 rounded-lg hover:bg-light-blue transition-all duration-300 hover:scale-105 whitespace-nowrap"
                     >
                         <span className="material-symbols-outlined mr-2">calendar_month</span>
                         Agendar Ahora
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>

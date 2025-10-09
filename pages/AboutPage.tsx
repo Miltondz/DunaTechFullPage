@@ -5,18 +5,18 @@ import About from '../components/About';
 const AboutPage: React.FC = () => {
     useEffect(() => {
         // SEO: Page title
-        document.title = 'Sobre Nosotros - Dunatech | 13+ Años de Experiencia en Tecnología';
+        document.title = 'Sobre Nosotros - Dunatech | Empresa Joven Fábrica de Software Chile';
         
         // SEO: Meta description
         const metaDescription = document.querySelector('meta[name="description"]');
         if (metaDescription) {
-            metaDescription.setAttribute('content', 'Conoce la historia de Dunatech, fundada en 2019 por Milton Díaz. Más de 13 años de experiencia, +50 proyectos exitosos y certificaciones en Google Cloud, Microsoft .NET y Machine Learning.');
+            metaDescription.setAttribute('content', 'Conoce Dunatech: empresa joven de desarrollo de software a medida en Chile fundada en 2019. Fábrica de software con +13 años de experiencia acumulada, +50 proyectos exitosos. Certificaciones en Google Cloud, Microsoft .NET y Machine Learning. Especializados en soluciones TI para pymes con metodologías ágiles.');
         }
         
-        // SEO: Meta keywords
+        // SEO: Meta keywords with Chile focus
         const metaKeywords = document.querySelector('meta[name="keywords"]');
         if (metaKeywords) {
-            metaKeywords.setAttribute('content', 'sobre dunatech, equipo dunatech, Milton Díaz, historia empresa tecnología, certificaciones google cloud, experiencia desarrollo software, misión visión valores');
+            metaKeywords.setAttribute('content', 'sobre dunatech, empresa joven desarrollo software, fábrica de software Chile, startup tech Santiago, equipo dunatech Chile, Milton Díaz, empresa tecnología Chile, certificaciones google cloud, certificaciones microsoft, experiencia desarrollo software, consultoría informática para startups, empresa IT Santiago, misión visión valores, equipo desarrollo ágil, desarrolladores certificados Chile, transformación digital pymes');
         }
         
         // SEO: Open Graph
@@ -26,7 +26,7 @@ const AboutPage: React.FC = () => {
             ogTitle.setAttribute('property', 'og:title');
             document.head.appendChild(ogTitle);
         }
-        ogTitle.setAttribute('content', 'Sobre Nosotros - Dunatech | Equipo Experto en Tecnología');
+        ogTitle.setAttribute('content', 'Sobre Nosotros - Dunatech | Empresa Joven Fábrica Software Chile');
         
         let ogDescription = document.querySelector('meta[property="og:description"]');
         if (!ogDescription) {
@@ -34,7 +34,7 @@ const AboutPage: React.FC = () => {
             ogDescription.setAttribute('property', 'og:description');
             document.head.appendChild(ogDescription);
         }
-        ogDescription.setAttribute('content', 'Fundada en 2019, Dunatech combina 13+ años de experiencia con innovación continua. Conoce nuestra historia, equipo y certificaciones.');
+        ogDescription.setAttribute('content', 'Empresa joven de software a medida fundada en 2019. Combinamos 13+ años de experiencia con metodologías ágiles y tecnologías modernas. Fábrica de software especializada en soluciones TI para pymes en Santiago, Chile.');
         
         // SEO: Canonical URL
         let canonical = document.querySelector('link[rel="canonical"]');

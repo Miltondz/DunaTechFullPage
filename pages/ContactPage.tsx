@@ -9,18 +9,18 @@ interface ContactPageProps {
 const ContactPage: React.FC<ContactPageProps> = ({ onFormSubmit }) => {
     useEffect(() => {
         // SEO: Page title
-        document.title = 'Contacto - Dunatech | Solicita una Consultoría Gratuita';
+        document.title = 'Contacto Dunatech Santiago | Consultoría Gratuita Desarrollo Software';
         
         // SEO: Meta description
         const metaDescription = document.querySelector('meta[name="description"]');
         if (metaDescription) {
-            metaDescription.setAttribute('content', 'Contáctanos para una consultoría gratuita. Tel: +1 (809) 123-4567 | Email: info@dunatech.com | Santiago, República Dominicana. Respuesta en menos de 24 horas.');
+            metaDescription.setAttribute('content', 'Contáctanos para una consultoría informática gratuita en Santiago, Chile. Empresa de desarrollo de software a medida en Región Metropolitana. Email: dunatech.site@gmail.com | Respuesta garantizada en 24 horas. Soporte TI para pymes y startups.');
         }
         
         // SEO: Meta keywords
         const metaKeywords = document.querySelector('meta[name="keywords"]');
         if (metaKeywords) {
-            metaKeywords.setAttribute('content', 'contacto dunatech, consultoría gratuita, cotización desarrollo software, contacto IT Santiago, teléfono dunatech, email dunatech');
+            metaKeywords.setAttribute('content', 'contacto dunatech Chile, consultoría informática gratuita Santiago, consultoría gratuita desarrollo software, cotización desarrollo software a medida Chile, contacto IT Santiago, empresa desarrollo software Región Metropolitana, contactar fábrica software Chile, presupuesto desarrollo web Santiago, presupuesto apps móviles, email dunatech, consultoría TI para pymes, soporte informático empresas Santiago, asesoría tecnológica Chile, transformación digital Santiago');
         }
         
         // SEO: Open Graph
@@ -30,7 +30,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ onFormSubmit }) => {
             ogTitle.setAttribute('property', 'og:title');
             document.head.appendChild(ogTitle);
         }
-        ogTitle.setAttribute('content', 'Contacto - Dunatech | Estamos Listos para Ayudarte');
+        ogTitle.setAttribute('content', 'Contacto Dunatech Santiago | Consultoría Gratuita Software a Medida');
         
         let ogDescription = document.querySelector('meta[property="og:description"]');
         if (!ogDescription) {
@@ -38,7 +38,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ onFormSubmit }) => {
             ogDescription.setAttribute('property', 'og:description');
             document.head.appendChild(ogDescription);
         }
-        ogDescription.setAttribute('content', 'Solicita una consultoría gratuita. Nuestro equipo está disponible de Lunes a Viernes, 8AM-6PM. Respuesta garantizada en 24 horas.');
+        ogDescription.setAttribute('content', 'Solicita consultoría informática gratuita en Santiago, Chile. Empresa de desarrollo software a medida. Disponibles Lun-Vie 8AM-6PM. Respuesta en 24h. Soluciones TI para pymes.');
         
         // SEO: Canonical URL
         let canonical = document.querySelector('link[rel="canonical"]');
