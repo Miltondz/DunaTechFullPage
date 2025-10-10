@@ -4,19 +4,19 @@ import Applications from '../components/Applications';
 
 const ApplicationsPage: React.FC = () => {
     useEffect(() => {
-        // SEO: Page title
-        document.title = 'Aplicaciones y Productos de Software a Medida | Soluciones SaaS - Dunatech';
+        // SEO: Page title optimizado con palabras clave principales
+        document.title = 'Aplicaciones Web Personalizadas y Software a Medida Chile | Dunatech';
         
-        // SEO: Meta description
+        // SEO: Meta description optimizada (150-160 caracteres)
         const metaDescription = document.querySelector('meta[name="description"]');
         if (metaDescription) {
-            metaDescription.setAttribute('content', 'Descubre nuestras aplicaciones y productos de software a medida: sistemas de gestión empresarial, soluciones SaaS personalizadas, herramientas digitales para pymes y software empresarial que automatizan procesos. Desarrollo personalizado en Chile.');
+            metaDescription.setAttribute('content', 'Descubre nuestras aplicaciones web personalizadas y software a medida en Chile: sistemas de gestión, acortador de URLs, plataformas de reservas y soluciones empresariales modernas con React y tecnologías de vanguardia.');
         }
         
-        // SEO: Meta keywords
+        // SEO: Meta keywords actualizadas con términos específicos
         const metaKeywords = document.querySelector('meta[name="keywords"]');
         if (metaKeywords) {
-            metaKeywords.setAttribute('content', 'aplicaciones dunatech, productos software a medida, software personalizado Chile, soluciones empresariales, aplicaciones web personalizadas, desarrollo SaaS Chile, herramientas digitales para pymes, software empresarial, sistemas de gestión a medida, aplicaciones móviles empresariales, plataformas SaaS personalizadas, automatización de procesos, software para retail, software para servicios, soluciones tecnológicas personalizadas');
+            metaKeywords.setAttribute('content', 'aplicaciones web personalizadas Chile, software a medida, desarrollo de aplicaciones React, sistema de gestión talleres mecánicos, acortador de URLs, plataforma de reservas, software para pymes Chile, desarrollo full-stack, aplicaciones con Supabase, software empresarial personalizado, CanvasDesk, urlz.lat, AutoTaller Pro, desarrollo web profesional Chile, aplicaciones SaaS Chile');
         }
         
         // SEO: Open Graph
@@ -26,7 +26,7 @@ const ApplicationsPage: React.FC = () => {
             ogTitle.setAttribute('property', 'og:title');
             document.head.appendChild(ogTitle);
         }
-        ogTitle.setAttribute('content', 'Aplicaciones y Productos Software a Medida | Soluciones SaaS - Dunatech');
+        ogTitle.setAttribute('content', 'Aplicaciones Web Personalizadas y Software a Medida Chile | Dunatech');
         
         let ogDescription = document.querySelector('meta[property="og:description"]');
         if (!ogDescription) {
@@ -34,7 +34,25 @@ const ApplicationsPage: React.FC = () => {
             ogDescription.setAttribute('property', 'og:description');
             document.head.appendChild(ogDescription);
         }
-        ogDescription.setAttribute('content', 'Catálogo de aplicaciones y productos software a medida en Chile: sistemas de gestión empresarial, soluciones SaaS personalizadas y herramientas digitales que impulsan la eficiencia de pymes.');
+        ogDescription.setAttribute('content', 'Portfolio de aplicaciones web personalizadas en Chile: CanvasDesk, urlz.lat, AutoTaller Pro y más. Desarrollo de software a medida con React, TypeScript y tecnologías modernas para empresas.');
+        
+        // SEO: Open Graph image
+        let ogImage = document.querySelector('meta[property="og:image"]');
+        if (!ogImage) {
+            ogImage = document.createElement('meta');
+            ogImage.setAttribute('property', 'og:image');
+            document.head.appendChild(ogImage);
+        }
+        ogImage.setAttribute('content', 'https://dunatech.com/images/canvasdesk01.jpeg');
+        
+        // SEO: Twitter Card
+        let twitterCard = document.querySelector('meta[name="twitter:card"]');
+        if (!twitterCard) {
+            twitterCard = document.createElement('meta');
+            twitterCard.setAttribute('name', 'twitter:card');
+            document.head.appendChild(twitterCard);
+        }
+        twitterCard.setAttribute('content', 'summary_large_image');
         
         // SEO: Canonical URL
         let canonical = document.querySelector('link[rel="canonical"]');
@@ -44,6 +62,69 @@ const ApplicationsPage: React.FC = () => {
             document.head.appendChild(canonical);
         }
         canonical.setAttribute('href', 'https://dunatech.com/aplicaciones');
+        
+        // SEO: Structured Data - ItemList Schema
+        const structuredData = {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "Aplicaciones Web Desarrolladas por Dunatech",
+            "description": "Portfolio de aplicaciones web personalizadas y software a medida desarrollado en Chile",
+            "itemListElement": [
+                {
+                    "@type": "SoftwareApplication",
+                    "position": 1,
+                    "name": "CanvasDesk",
+                    "description": "Herramienta de pensamiento visual con canvas infinito para organizar ideas",
+                    "applicationCategory": "ProductivityApplication",
+                    "operatingSystem": "Web Browser",
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "0",
+                        "priceCurrency": "USD"
+                    }
+                },
+                {
+                    "@type": "SoftwareApplication",
+                    "position": 2,
+                    "name": "urlz.lat",
+                    "description": "Acortador de URLs inteligente con generación de QR y analíticas",
+                    "applicationCategory": "WebApplication",
+                    "operatingSystem": "Web Browser"
+                },
+                {
+                    "@type": "SoftwareApplication",
+                    "position": 3,
+                    "name": "AutoTaller Pro",
+                    "description": "Sistema de gestión integral para talleres mecánicos y servicios automotrices",
+                    "applicationCategory": "BusinessApplication",
+                    "operatingSystem": "Web Browser"
+                },
+                {
+                    "@type": "SoftwareApplication",
+                    "position": 4,
+                    "name": "Website Profesor de Música",
+                    "description": "Plataforma web con sistema de reservas y CMS para profesores",
+                    "applicationCategory": "WebApplication",
+                    "operatingSystem": "Web Browser"
+                },
+                {
+                    "@type": "SoftwareApplication",
+                    "position": 5,
+                    "name": "¿Cuánto Me Toca?",
+                    "description": "Aplicación para dividir cuentas de restaurante con OCR e IA",
+                    "applicationCategory": "FinanceApplication",
+                    "operatingSystem": "Web Browser"
+                }
+            ]
+        };
+        
+        let scriptTag = document.querySelector('script[type="application/ld+json"]');
+        if (!scriptTag) {
+            scriptTag = document.createElement('script');
+            scriptTag.setAttribute('type', 'application/ld+json');
+            document.head.appendChild(scriptTag);
+        }
+        scriptTag.textContent = JSON.stringify(structuredData);
     }, []);
     
     return <Applications />;

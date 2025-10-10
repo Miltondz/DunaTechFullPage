@@ -10,13 +10,13 @@ const AboutPage: React.FC = () => {
         // SEO: Meta description
         const metaDescription = document.querySelector('meta[name="description"]');
         if (metaDescription) {
-            metaDescription.setAttribute('content', 'Conoce Dunatech: empresa joven de desarrollo de software a medida en Chile fundada en 2019. Fábrica de software con +13 años de experiencia acumulada, +50 proyectos exitosos. Certificaciones en Google Cloud, Microsoft .NET y Machine Learning. Especializados en soluciones TI para pymes con metodologías ágiles.');
+            metaDescription.setAttribute('content', 'Conoce Dunatech: empresa joven de desarrollo de software a medida en Chile. Milton Díaz (20+ años exp.) y María Alejandra Eggers (UX/QA). Especializados en modernización de sistemas legacy, desarrollo web/escritorio, integración de sistemas, UX research, QA & Testing, documentación técnica y capacitación IT.');
         }
         
         // SEO: Meta keywords with Chile focus
         const metaKeywords = document.querySelector('meta[name="keywords"]');
         if (metaKeywords) {
-            metaKeywords.setAttribute('content', 'sobre dunatech, empresa joven desarrollo software, fábrica de software Chile, startup tech Santiago, equipo dunatech Chile, Milton Díaz, empresa tecnología Chile, certificaciones google cloud, certificaciones microsoft, experiencia desarrollo software, consultoría informática para startups, empresa IT Santiago, misión visión valores, equipo desarrollo ágil, desarrolladores certificados Chile, transformación digital pymes');
+            metaKeywords.setAttribute('content', 'sobre dunatech, empresa joven desarrollo software, fábrica de software Chile, equipo dunatech Chile, Milton Díaz, María Alejandra Eggers, antropologa UX Chile, UX researcher Santiago, QA specialist Chile, empresa tecnología Chile, experiencia desarrollo software, modernización sistemas legacy, mantenimiento código legacy, prototipado rápido, diseño soluciones empresariales, análisis mejora procesos, empresa IT Santiago, equipo desarrollo ágil, transformación digital pymes, UX research Chile, quality assurance Chile, testing usabilidad WCAG, documentación técnica, capacitación IT Chile, integración sistemas, arquitectura software');
         }
         
         // SEO: Open Graph

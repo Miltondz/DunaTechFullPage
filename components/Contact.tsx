@@ -64,7 +64,7 @@ const Contact: React.FC<ContactProps> = ({ onFormSubmit }) => {
                         <div className="bg-background-dark/50 p-8 rounded-2xl shadow-xl hud-overlay backdrop-blur-sm">
                              <h3 className="text-2xl font-bold text-text-dark mb-6 font-display">Envíanos un Mensaje</h3>
                             <form className="space-y-6" onSubmit={handleSubmit}>
-                                <div className="grid md:grid-cols-2 gap-6">
+                                <div className="grid lg:grid-cols-2 gap-6">
                                     <div>
                                         <label htmlFor="name" className="sr-only">Nombre</label>
                                         <input 

@@ -30,6 +30,7 @@ const Header: React.FC = () => {
         { to: '/sobre-nosotros', label: 'Sobre Nosotros' },
         { to: '/servicios', label: 'Servicios' },
         { to: '/aplicaciones', label: 'Aplicaciones' },
+        { to: '/blog', label: 'Blog' },
         { to: '/contacto', label: 'Contacto' },
     ];
 

@@ -1,7 +1,9 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 
 const HeroImage: React.FC = () => {
+    const [imageError, setImageError] = useState(false);
+    
     return (
         <section className="py-16 sm:py-24 relative overflow-hidden">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -13,8 +15,17 @@ const HeroImage: React.FC = () => {
                         
                         {/* Main Image Container */}
                         <div className="relative bg-background-dark/50 rounded-2xl hud-overlay backdrop-blur-sm p-8 sm:p-12">
-                            {/* SVG Illustration - Tech/Data themed */}
-                            <div className="relative aspect-[16/9] sm:aspect-[21/9] w-full">
+                            {/* Main Hero Image with SVG Fallback */}
+                            <div className="relative aspect-[16/9] sm:aspect-[21/9] w-full overflow-hidden rounded-lg">
+                                {!imageError ? (
+                                    <img 
+                                        src="/images/main.jpg" 
+                                        alt="Arquitectura de soluciones tecnológicas Dunatech - Desarrollo de software a medida, aplicaciones web personalizadas y sistemas integrados para empresas en Chile"
+                                        className="w-full h-full object-cover object-center"
+                                        onError={() => setImageError(true)}
+                                        loading="eager"
+                                    />
+                                ) : (
                                 <svg 
                                     viewBox="0 0 1200 400" 
                                     className="w-full h-full"
@@ -107,6 +118,7 @@ const HeroImage: React.FC = () => {
                                         </circle>
                                     </g>
                                 </svg>
+                                )}
                             </div>
 
                             {/* Caption */}
@@ -136,7 +148,7 @@ const HeroImage: React.FC = () => {
                             { icon: 'speed', label: 'Alto Rendimiento' },
                             { icon: 'security', label: 'Seguridad Robusta' },
                             { icon: 'auto_awesome', label: 'Innovación' },
-                            { icon: 'support_agent', label: 'Soporte 24/7' }
+                            { icon: 'psychology', label: 'Soluciones IA' }
                         ].map((feature, index) => (
                             <div key={index} className="text-center group">
                                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-xl mb-3 group-hover:bg-primary/20 transition-colors">

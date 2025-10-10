@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import RelatedContent from './RelatedContent';
 
 const About: React.FC = () => {
     return (
@@ -23,49 +24,25 @@ const About: React.FC = () => {
             <section className="py-16 bg-background-dark/30">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="max-w-6xl mx-auto">
-                        <div className="grid md:grid-cols-2 gap-12 items-center">
-                            <div className="order-2 md:order-1">
-                                <div className="relative">
-                                    <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-light-blue/20 rounded-2xl blur-xl opacity-50"></div>
-                                    <div className="relative bg-background-dark/80 rounded-2xl p-8 hud-overlay backdrop-blur-sm">
-                                        <div className="space-y-4 text-text-dark/70 text-lg">
-                                            <div className="flex items-start gap-4">
-                                                <span className="material-symbols-outlined text-primary text-3xl mt-1">history</span>
-                                                <div>
-                                                    <h4 className="font-display font-bold text-text-dark mb-2">2019 - Nuestros Inicios</h4>
-                                                    <p>Fundada en República Dominicana con la visión de democratizar el acceso a soluciones tecnológicas de clase mundial.</p>
-                                                </div>
-                                            </div>
-                                            <div className="flex items-start gap-4">
-                                                <span className="material-symbols-outlined text-light-blue text-3xl mt-1">trending_up</span>
-                                                <div>
-                                                    <h4 className="font-display font-bold text-text-dark mb-2">2020-2023 - Crecimiento</h4>
-                                                    <p>Expansión de servicios y equipo. Más de 50 proyectos exitosos entregados a clientes en diversos sectores.</p>
-                                                </div>
-                                            </div>
-                                            <div className="flex items-start gap-4">
-                                                <span className="material-symbols-outlined text-light-green text-3xl mt-1">rocket_launch</span>
-                                                <div>
-                                                    <h4 className="font-display font-bold text-text-dark mb-2">2024 - Innovación Continua</h4>
-                                                    <p>Integración de IA y Cloud Computing avanzado. Nos consolidamos como líderes en transformación digital.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="order-1 md:order-2">
-                                <h2 className="text-3xl md:text-4xl font-bold text-text-dark mb-6 font-display">
-                                    Nuestra <span className="text-primary">Historia</span>
-                                </h2>
-                                <p className="text-text-dark/80 text-lg mb-6 leading-relaxed">
+                        <div className="max-w-4xl mx-auto">
+                            <h2 className="text-3xl md:text-4xl font-bold text-text-dark mb-8 font-display text-center">
+                                Nuestra <span className="text-primary">Historia</span>
+                            </h2>
+                            <div className="space-y-6 text-text-dark/80 text-lg leading-relaxed">
+                                <p>
                                     Dunatech nació de una simple pero poderosa idea: <strong className="text-primary">la tecnología debe ser un catalizador para el crecimiento</strong>, no un obstáculo.
                                 </p>
-                                <p className="text-text-dark/80 text-lg mb-6 leading-relaxed">
-                                    Fundada por Milton Díaz, un ingeniero con más de 13 años de experiencia, nuestra empresa se construyó sobre los cimientos de la excelencia técnica, la innovación constante y un compromiso inquebrantable con el éxito de nuestros clientes.
+                                <p>
+                                    Fundada por <strong className="text-primary">Milton Díaz</strong>, un ingeniero con más de 20 años de experiencia en desarrollo de software empresarial, nuestra empresa se construyó sobre los cimientos de resolver problemas reales de negocio con soluciones tecnológicas efectivas y sostenibles.
                                 </p>
-                                <p className="text-text-dark/80 text-lg leading-relaxed">
-                                    Hoy, somos un equipo multidisciplinario que combina experiencia local con estándares globales, transformando desafíos tecnológicos en ventajas competitivas.
+                                <p>
+                                    A lo largo de dos décadas, hemos especializado nuestra experiencia en la <Link to="/servicios" className="text-light-blue font-semibold hover:underline">modernización de sistemas legacy críticos</Link>, desarrollo de sistemas de gestión de almacenes (WMS), sistemas contables, integraciones bancarias y tiendas en línea. Esta experiencia práctica nos ha enseñado que cada negocio es único y requiere <Link to="/servicios" className="text-primary hover:underline">soluciones adaptadas a su realidad</Link>.
+                                </p>
+                                <p>
+                                    Hoy, <strong className="text-light-green">somos un equipo multidisciplinario</strong> que combina experiencia técnica profunda con una perspectiva centrada en el usuario. Con la incorporación de <strong className="text-light-blue">María Alejandra Eggers</strong>, antropóloga y <Link to="/servicios" className="text-light-blue hover:underline">especialista en UX/QA</Link>, agregamos una dimensión humana al desarrollo de software, asegurando que nuestras soluciones no solo funcionen bien, sino que también sean intuitivas y cumplan con las expectativas de los usuarios finales.
+                                </p>
+                                <p>
+                                    Transformamos desafíos tecnológicos en ventajas competitivas, combinando experiencia local con estándares globales de calidad. <Link to="/contacto" className="text-primary font-semibold hover:underline">Conversemos sobre cómo podemos ayudarte</Link>.
                                 </p>
                             </div>
                         </div>
@@ -105,7 +82,7 @@ const About: React.FC = () => {
                                 </div>
                                 <h3 className="text-2xl font-bold text-text-dark mb-4 font-display">Nuestra Visión</h3>
                                 <p className="text-text-dark/80 text-lg leading-relaxed">
-                                    Ser reconocidos como el socio tecnológico preferido en el Caribe, destacando por nuestra capacidad de entregar soluciones de nivel global con la cercanía y comprensión del mercado local. Queremos ser sinónimo de excelencia técnica e innovación.
+                                    Ser reconocidos como el socio tecnológico preferido de las pymes en Chile, destacando por nuestra capacidad de entregar soluciones de nivel global con la cercanía y comprensión del mercado local. Queremos ser sinónimo de innovación accesible y transformación digital efectiva.
                                 </p>
                             </div>
                         </div>
@@ -161,7 +138,7 @@ const About: React.FC = () => {
                                     </div>
                                     <div className="mt-6">
                                         <h3 className="text-2xl font-bold text-text-dark font-display">Milton Díaz</h3>
-                                        <p className="text-primary font-semibold">Fundador & CEO</p>
+                                        <p className="text-primary font-semibold">Fundador & CEO | Product Manager</p>
                                         <div className="flex justify-center gap-4 mt-4">
                                             <a href="https://www.linkedin.com/in/milton-diaz" target="_blank" rel="noopener noreferrer" className="text-text-dark/50 hover:text-primary transition-colors">
                                                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
@@ -171,16 +148,61 @@ const About: React.FC = () => {
                                 </div>
                                 <div className="md:col-span-3">
                                     <p className="text-text-dark/80 text-lg mb-6 leading-relaxed">
-                                        Con más de <strong className="text-primary">13 años de experiencia</strong> en el sector tecnológico, Milton es el arquitecto detrás de Dunatech. Su enfoque combina rigor técnico con una profunda comprensión de las necesidades empresariales.
+                                        Con más de <strong className="text-primary">20 años de experiencia</strong> en el sector tecnológico, Milton es el fundador y arquitecto detrás de Dunatech. Su enfoque combina visión estratégica con implementación práctica, especializando su experiencia en la transformación de sistemas legacy y el diseño de soluciones empresariales.
                                     </p>
                                     <div className="grid sm:grid-cols-2 gap-4">
                                         {[
-                                            '13+ años en desarrollo de software',
-                                            'Certificado en Google Cloud AI/ML',
-                                            'Experto en arquitectura de sistemas',
-                                            'Especialista en .NET y Blazor',
-                                            'Bilingüe (Español/Inglés)',
-                                            'Líder en optimización de procesos'
+                                            '20+ años en desarrollo de software',
+                                            'Warehouse Management Systems (WMS)',
+                                            'Sistemas contables e integraciones bancarias',
+                                            'Desarrollo de tiendas en línea (e-commerce)',
+                                            'Modernización de sistemas legacy',
+                                            'Product Management y diseño de soluciones',
+                                            'Prototipado rápido y validación de ideas',
+                                            'Análisis y mejora de procesos empresariales'
+                                        ].map((item, index) => (
+                                            <div key={index} className="flex items-center gap-3">
+                                                <span className="material-symbols-outlined text-light-green text-xl">check_circle</span>
+                                                <span className="text-text-dark/80 text-sm">{item}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* UX/QA Specialist */}
+                        <div className="bg-background-dark/50 rounded-2xl shadow-xl p-8 md:p-12 hud-overlay backdrop-blur-sm mb-12">
+                            <div className="grid md:grid-cols-5 gap-8 items-center">
+                                <div className="md:col-span-2 text-center">
+                                    <div className="relative inline-block">
+                                        <div className="absolute -inset-4 bg-gradient-to-br from-light-blue to-light-green rounded-full blur-xl opacity-30"></div>
+                                        <div className="relative w-48 h-48 bg-gradient-to-br from-light-blue/50 to-light-green/50 rounded-full mx-auto flex items-center justify-center animate-float" style={{ animationDelay: '1s' }}>
+                                            <span className="material-symbols-outlined text-white text-8xl">person</span>
+                                        </div>
+                                    </div>
+                                    <div className="mt-6">
+                                        <h3 className="text-2xl font-bold text-text-dark font-display">María Alejandra Eggers</h3>
+                                        <p className="text-light-blue font-semibold">UX Researcher & QA Specialist | Product Owner</p>
+                                        <div className="flex justify-center gap-4 mt-4">
+                                            <a href="mailto:contacto@antropeggers.cl" className="text-text-dark/50 hover:text-primary transition-colors">
+                                                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="md:col-span-3">
+                                    <p className="text-text-dark/80 text-lg mb-6 leading-relaxed">
+                                        <strong className="text-light-blue">Antropóloga y especialista en UX</strong> con más de 4 años de experiencia en investigación de usuarios, testing de usabilidad y aseguramiento de calidad. Su perspectiva antropológica aporta una dimensión única al entendimiento del comportamiento humano en entornos digitales.
+                                    </p>
+                                    <div className="grid sm:grid-cols-2 gap-4">
+                                        {[
+                                            'Investigación UX con enfoque antropológico',
+                                            'Testing de usabilidad y accesibilidad (WCAG)',
+                                            'Quality Assurance integral',
+                                            'Documentación técnica accesible',
+                                            'Capacitación, Onboarding, y adopción de procesos',
+                                            'Análisis de patrones comportamentales'
                                         ].map((item, index) => (
                                             <div key={index} className="flex items-center gap-3">
                                                 <span className="material-symbols-outlined text-light-green text-xl">check_circle</span>
@@ -202,11 +224,13 @@ const About: React.FC = () => {
                                 <div className="flex flex-wrap justify-center gap-3">
                                     {[
                                         'Desarrollo Full-Stack',
-                                        'DevOps & Cloud',
-                                        'UI/UX Design',
-                                        'Data Science',
-                                        'Ciberseguridad',
-                                        'Gestión de Proyectos'
+                                        'UX Research & Design',
+                                        'Quality Assurance (QA)',
+                                        'Documentación Técnica',
+                                        'Integración de Sistemas',
+                                        'Bases de Datos',
+                                        'Capacitación IT',
+                                        'Testing & Accesibilidad'
                                     ].map((role, index) => (
                                         <span key={index} className="inline-block bg-background-dark/50 px-4 py-2 rounded-full text-text-dark font-display text-sm border border-primary/20">
                                             {role}
@@ -225,20 +249,19 @@ const About: React.FC = () => {
                     <div className="max-w-6xl mx-auto">
                         <div className="text-center mb-16">
                             <h2 className="text-4xl md:text-5xl font-bold text-text-dark mb-4 font-display animate-glow">
-                                Logros y <span className="text-primary">Certificaciones</span>
+                                Experiencia y <span className="text-primary">Especialización</span>
                             </h2>
                             <p className="text-xl text-text-dark/70">
-                                Respaldo técnico que garantiza soluciones de calidad mundial
+                                Trayectoria profesional que garantiza soluciones efectivas para tu negocio
                             </p>
                         </div>
 
                         {/* Stats */}
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-12">
                             {[
-                                { number: '50+', label: 'Proyectos Completados', icon: 'task_alt' },
                                 { number: '100%', label: 'Satisfacción Cliente', icon: 'sentiment_satisfied' },
-                                { number: '5+', label: 'Años de Experiencia', icon: 'workspace_premium' },
-                                { number: '15+', label: 'Tecnologías Dominadas', icon: 'code' }
+                                { number: '20+', label: 'Años de Experiencia', icon: 'workspace_premium' },
+                                { number: '25+', label: 'Tecnologías Dominadas', icon: 'code' }
                             ].map((stat, index) => (
                                 <div key={index} className="bg-background-dark/50 p-6 rounded-xl hud-overlay backdrop-blur-sm text-center transform hover:scale-105 transition-all duration-300">
                                     <span className="material-symbols-outlined text-primary text-4xl mb-3 block">{stat.icon}</span>
@@ -251,24 +274,23 @@ const About: React.FC = () => {
                         {/* Certificaciones */}
                         <div className="bg-background-dark/50 rounded-2xl p-8 md:p-12 hud-overlay backdrop-blur-sm">
                             <h3 className="text-2xl font-bold text-text-dark mb-8 font-display text-center">
-                                Certificaciones Profesionales
+                                Áreas de Especialización
                             </h3>
                             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {[
-                                    { name: 'Smart Analytics', provider: 'Google Cloud', icon: 'analytics' },
-                                    { name: 'Machine Learning', provider: 'Google Cloud', icon: 'psychology' },
-                                    { name: 'AI on Google Cloud', provider: 'Google', icon: 'neurology' },
-                                    { name: 'Blazor WebAssembly', provider: 'Microsoft', icon: 'web' },
-                                    { name: '.NET Development', provider: 'Microsoft', icon: 'code' },
-                                    { name: 'Cloud Architecture', provider: 'Certified', icon: 'cloud' }
-                                ].map((cert, index) => (
-                                    <div key={index} className="flex items-start gap-4 bg-background-dark/30 p-4 rounded-lg border border-primary/20">
+                                    { name: 'Desarrollo de Software a Medida', icon: 'code' },
+                                    { name: 'Modernización de Sistemas Legacy', icon: 'upgrade' },
+                                    { name: 'Investigación y Diseño UX', icon: 'psychology' },
+                                    { name: 'Quality Assurance & Testing', icon: 'verified' },
+                                    { name: 'Integración de Sistemas', icon: 'account_tree' },
+                                    { name: 'Documentación y Capacitación', icon: 'menu_book' }
+                                ].map((spec, index) => (
+                                    <div key={index} className="flex items-start gap-4 bg-background-dark/30 p-4 rounded-lg border border-primary/20 hover:border-primary/40 transition-colors">
                                         <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                                            <span className="material-symbols-outlined text-primary text-2xl">{cert.icon}</span>
+                                            <span className="material-symbols-outlined text-primary text-2xl">{spec.icon}</span>
                                         </div>
                                         <div>
-                                            <h4 className="font-bold text-text-dark font-display text-sm">{cert.name}</h4>
-                                            <p className="text-text-dark/60 text-xs">{cert.provider}</p>
+                                            <h4 className="font-bold text-text-dark font-display text-sm">{spec.name}</h4>
                                         </div>
                                     </div>
                                 ))}
@@ -277,6 +299,32 @@ const About: React.FC = () => {
                     </div>
                 </div>
             </section>
+
+            {/* Related Content */}
+            <RelatedContent
+                title="Explora Más Sobre Dunatech"
+                subtitle="Descubre nuestros servicios y proyectos"
+                links={[
+                    {
+                        title: 'Nuestros Servicios',
+                        description: 'Desarrollo a medida, integración de sistemas, UX research, QA, documentación técnica y más.',
+                        link: '/servicios',
+                        icon: 'build'
+                    },
+                    {
+                        title: 'Casos de Éxito',
+                        description: 'Descubre cómo hemos ayudado a empresas como la tuya a alcanzar sus objetivos.',
+                        link: '/aplicaciones',
+                        icon: 'work'
+                    },
+                    {
+                        title: 'Contacto',
+                        description: 'Agenda una consultoría gratuita y descubre cómo podemos ayudarte.',
+                        link: '/contacto',
+                        icon: 'send'
+                    }
+                ]}
+            />
 
             {/* CTA Final */}
             <section className="py-20 bg-gradient-to-br from-primary/10 to-light-blue/10">

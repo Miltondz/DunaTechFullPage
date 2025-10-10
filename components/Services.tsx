@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import RelatedContent from './RelatedContent';
 
 interface ServiceDetail {
     icon: string;
@@ -25,24 +26,24 @@ const Services: React.FC = () => {
             title: 'Arquitectura y Optimización de Bases de Datos',
             subtitle: 'Datos rápidos, seguros y escalables',
             description: 'Transformamos tu información en un activo estratégico mediante arquitecturas de bases de datos optimizadas y escalables.',
-            problem: '¿Tus consultas son lentas? ¿Tu base de datos no puede manejar el crecimiento? ¿Tienes problemas de seguridad o integridad de datos?',
-            solution: 'Diseñamos, optimizamos y gestionamos bases de datos de alto rendimiento que crecen con tu negocio.',
+            problem: '¿Tus consultas son lentas? ¿Tus reportes y consultas están desactualizados? ¿Necesitas implementar nueva lógica de negocio o modificar la existente?',
+            solution: 'Optimizamos consultas, actualizamos procedimientos almacenados y adaptamos tu base de datos a nuevos requerimientos de negocio con rapidez y precisión.',
             benefits: [
                 'Reduce tiempos de respuesta hasta 10x más rápido',
                 'Ahorra costos en infraestructura con optimización inteligente',
-                'Escala sin límites conforme crece tu negocio',
-                'Protege tu información crítica con seguridad avanzada',
+                'Reportes actualizados con información en tiempo real',
+                'Adapta tu base de datos a nuevos requerimientos de negocio',
                 'Mejora la productividad del equipo con acceso rápido a datos'
             ],
             features: [
-                'Diseño de esquemas optimizados',
-                'Optimización de consultas SQL complejas',
                 'Implementación de índices estratégicos',
+                'Refactorización de procedimientos almacenados',
                 'Migración de datos sin tiempo de inactividad',
+                'Actualización de lógica de negocio obsoleta',
                 'Monitoreo y ajuste continuo de rendimiento',
                 'Backup y recuperación ante desastres'
             ],
-            technologies: ['MS SQL Server', 'PostgreSQL', 'MySQL', 'MongoDB', 'Redis'],
+            technologies: ['MS SQL Server', 'PostgreSQL', 'MySQL', 'MongoDB'],
             useCases: [
                 'E-commerce con millones de productos',
                 'Sistemas ERP con alta concurrencia',
@@ -53,32 +54,32 @@ const Services: React.FC = () => {
         },
         {
             icon: 'code',
-            title: 'Desarrollo de Aplicaciones Web',
-            subtitle: 'Aplicaciones modernas que impulsan resultados',
-            description: 'Creamos aplicaciones web personalizadas que no solo se ven bien, sino que resuelven problemas reales y generan valor para tu negocio.',
-            problem: '¿Tu sitio web es lento y desactualizado? ¿Necesitas automatizar procesos manuales? ¿Quieres una aplicación que te diferencie de la competencia?',
-            solution: 'Desarrollamos aplicaciones web a medida usando tecnologías modernas, con enfoque en experiencia de usuario y rendimiento.',
+            title: 'Desarrollo de Aplicaciones Web y Escritorio',
+            subtitle: 'Aplicaciones modernas y escritorio que impulsan resultados',
+            description: 'Creamos aplicaciones web, de escritorio y prototipos rápidos personalizados que no solo se ven bien, sino que resuelven problemas reales y generan valor para tu negocio. Desde sistemas modernos hasta modernización de código legacy.',
+            problem: '¿Tu sitio web es lento y desactualizado? ¿Necesitas automatizar procesos manuales? ¿Tienes aplicaciones de escritorio obsoletas que necesitan modernizarse?',
+            solution: 'Desarrollamos aplicaciones web y de escritorio a medida, creamos prototipos rápidos para validar ideas y modernizamos código legacy (VB6, Visual Basic) a tecnologías actuales.',
             benefits: [
                 'Automatiza procesos y reduce errores humanos',
                 'Mejora la experiencia de tus clientes y empleados',
-                'Accede a tu negocio desde cualquier dispositivo',
-                'Intégrate fácilmente con otros sistemas',
+                'Prototipa y valida ideas rápidamente antes de invertir',
+                'Moderniza aplicaciones legacy sin perder funcionalidad',
                 'Diferencíate con funcionalidades únicas'
             ],
             features: [
                 'Desarrollo Full-Stack (Frontend + Backend)',
-                'Diseño responsivo (móvil, tablet, desktop)',
-                'Interfaces de usuario intuitivas',
+                'Aplicaciones de escritorio Windows (WinForms, WPF)',
+                'Prototipado rápido y MVP (Minimum Viable Product)',
+                'Modernización de código legacy VB6/Visual Basic',
                 'API RESTful y GraphQL',
-                'Autenticación y autorización segura',
                 'Dashboards y reportes en tiempo real'
             ],
-            technologies: ['React', 'TypeScript', '.NET Core', 'Node.js', 'Blazor'],
+            technologies: ['React', 'TypeScript', '.NET Core', 'C#', 'VB.NET', 'Visual Basic', 'VB6 Legacy'],
             useCases: [
                 'Portales de clientes y proveedores',
-                'Sistemas de gestión interna (CRM, ERP)',
-                'Plataformas de e-learning',
-                'Marketplaces y tiendas online'
+                'Sistemas de gestión de escritorio Windows',
+                'Modernización de aplicaciones VB6 a .NET',
+                'Prototipos rápidos para validación de producto'
             ],
             visualColor: 'from-light-blue to-light-green'
         },
@@ -98,13 +99,13 @@ const Services: React.FC = () => {
             ],
             features: [
                 'Integración WMS-ERP-CRM',
-                'Conexión con APIs de terceros',
+                'Conexión con APIs de terceros (REST, SOAP, WS)',
                 'Webhooks y eventos en tiempo real',
                 'ETL y transformación de datos',
                 'Middleware y message brokers',
-                'Monitoreo de integraciones 24/7'
+                'Automatización con Make y n8n'
             ],
-            technologies: ['REST API', 'GraphQL', 'Azure Service Bus', 'RabbitMQ', 'Zapier'],
+            technologies: ['REST API', 'SOAP', 'Web Services', 'Azure Service Bus', 'RabbitMQ', 'Make', 'n8n', 'Zapier'],
             useCases: [
                 'Sincronización ERP con e-commerce',
                 'Integración con pasarelas de pago',
@@ -114,33 +115,95 @@ const Services: React.FC = () => {
             visualColor: 'from-light-green to-primary'
         },
         {
-            icon: 'cloud',
-            title: 'Soluciones Cloud & DevOps',
-            subtitle: 'Infraestructura moderna y automatizada',
-            description: 'Migramos y optimizamos tu infraestructura en la nube, implementando prácticas DevOps para entregas más rápidas y confiables.',
-            problem: '¿Tu infraestructura es costosa y difícil de escalar? ¿Los despliegues son lentos y propensos a errores? ¿Te preocupa la seguridad?',
-            solution: 'Migramos a cloud, automatizamos despliegues y establecemos prácticas DevOps para operaciones eficientes.',
+            icon: 'psychology',
+            title: 'Investigación y Diseño UX',
+            subtitle: 'Experiencia de usuario centrada en personas',
+            description: 'Investigamos y diseñamos experiencias digitales excepcionales mediante metodologías UX profesionales que garantizan que tu producto resuelva las necesidades reales de tus usuarios.',
+            problem: '¿Tus usuarios abandonan tu aplicación? ¿No sabes qué necesitan realmente? ¿Tu diseño no convierte como esperas?',
+            solution: 'Aplicamos investigación de usuarios, testing de usabilidad y diseño centrado en personas para crear experiencias que los usuarios aman y que generan resultados medibles.',
             benefits: [
-                'Reduce costos de infraestructura hasta 40%',
-                'Escala automáticamente según demanda',
-                'Despliega actualizaciones sin tiempo de inactividad',
-                'Mejora seguridad con certificaciones cloud',
-                'Recupera tu servicio en minutos ante fallas'
+                'Reduce tasas de abandono hasta un 45%',
+                'Aumenta conversiones y satisfacción del usuario',
+                'Identifica problemas antes de desarrollar',
+                'Diferenciáte con experiencias superiores',
+                'Toma decisiones basadas en datos reales de usuarios'
             ],
             features: [
-                'Migración a Azure/AWS/GCP',
-                'Contenedores Docker y Kubernetes',
-                'CI/CD automatizado',
-                'Infrastructure as Code (Terraform)',
-                'Monitoreo y alertas proactivas',
-                'Backups automatizados'
+                'Investigación cualitativa (entrevistas, observación)',
+                'Testing de usabilidad con usuarios reales',
+                'Diseño de interfaces (UI/UX)',
+                'Arquitectura de información',
+                'Prototipado rápido y wireframes',
+                'Evaluaciones heurísticas y auditorías UX'
             ],
-            technologies: ['Azure', 'AWS', 'Docker', 'Kubernetes', 'GitHub Actions'],
+            technologies: ['Figma', 'Adobe XD', 'Sketch', 'UserTesting', 'Hotjar', 'Miro'],
             useCases: [
-                'Migración de on-premise a cloud',
-                'Arquitecturas microservicios',
-                'Aplicaciones serverless',
-                'Disaster recovery y alta disponibilidad'
+                'Rediseño de aplicaciones con baja adopción',
+                'Validación de nuevos productos antes de desarrollar',
+                'Optimización de procesos de conversión',
+                'Mejora de apps móviles y plataformas web'
+            ],
+            visualColor: 'from-primary to-light-blue'
+        },
+        {
+            icon: 'verified',
+            title: 'Quality Assurance y Testing',
+            subtitle: 'Calidad garantizada en cada detalle',
+            description: 'Aseguramos la calidad de tu software mediante testing exhaustivo y QA profesional, detectando errores antes de que lleguen a tus usuarios y garantizando una experiencia impecable.',
+            problem: '¿Tu aplicación tiene errores frecuentes? ¿Pierdes clientes por problemas técnicos? ¿Necesitas garantizar calidad antes del lanzamiento?',
+            solution: 'Ejecutamos testing funcional, de usabilidad y compatibilidad, combinando QA técnico con evaluación de experiencia de usuario para entregar productos robustos y confiables.',
+            benefits: [
+                'Detecta y corrige errores antes del lanzamiento',
+                'Reduce tickets de soporte hasta en 62%',
+                'Garantiza compatibilidad en todos los dispositivos',
+                'Mejora la confianza y satisfacción del usuario',
+                'Ahorra costos evitando errores en producción'
+            ],
+            features: [
+                'QA funcional con perspectiva de usuario',
+                'Testing de usabilidad y accesibilidad (WCAG)',
+                'Pruebas cross-browser y cross-device',
+                'Testing de regresión y end-to-end',
+                'Documentación detallada de bugs y soluciones',
+                'Certificación de calidad pre-lanzamiento'
+            ],
+            technologies: ['Selenium', 'Cypress', 'Jest', 'Postman', 'JMeter', 'BrowserStack'],
+            useCases: [
+                'Validación pre-lanzamiento de aplicaciones',
+                'Testing continuo en sprints ágiles',
+                'Certificación de calidad para clientes',
+                'Auditorías de software existente'
+            ],
+            visualColor: 'from-light-green to-primary'
+        },
+        {
+            icon: 'menu_book',
+            title: 'Documentación Técnica y Capacitación',
+            subtitle: 'Conocimiento accesible que empodera equipos',
+            description: 'Creamos documentación técnica clara y accesible, combinada con capacitación especializada que transforma conocimiento complejo en acción concreta para tu equipo.',
+            problem: '¿Tu documentación es confusa y genera muchas consultas? ¿Tu equipo necesita capacitarse en nuevas tecnologías? ¿Tienes alto volumen de tickets de soporte?',
+            solution: 'Desarrollamos documentación técnica profesional, manuales de usuario y programas de capacitación que reducen dependencias y empoderan a tu equipo para ser autónomo.',
+            benefits: [
+                'Reduce tickets de soporte básico hasta en 62%',
+                'Acelera onboarding de nuevos miembros del equipo',
+                'Mejora adopción de nuevas funcionalidades en 45%',
+                'Empodera al equipo con conocimiento estructurado',
+                'Documenta procesos críticos para continuidad operacional'
+            ],
+            features: [
+                'Documentación técnica para desarrolladores',
+                'Manuales de usuario con enfoque humano',
+                'Guías de implementación paso a paso',
+                'Talleres y capacitaciones personalizadas',
+                'Video tutoriales y material de formación',
+                'Knowledge base y centro de ayuda'
+            ],
+            technologies: ['Confluence', 'Notion', 'GitBook', 'Markdown', 'Docusaurus', 'Loom', 'Miro'],
+            useCases: [
+                'Documentación de APIs y sistemas complejos',
+                'Manuales para plataformas gubernamentales',
+                'Capacitación en herramientas internas',
+                'Onboarding de equipos de desarrollo'
             ],
             visualColor: 'from-primary via-light-blue to-light-green'
         }
@@ -168,21 +231,21 @@ const Services: React.FC = () => {
             <section className="py-8 bg-background-dark/20">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="max-w-6xl mx-auto">
-                        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
                             {servicesData.map((service, index) => (
                                 <button
                                     key={index}
                                     onClick={() => setSelectedService(index)}
-                                    className={`p-4 rounded-xl border-2 transition-all duration-300 text-left ${
+                                    className={`p-3 sm:p-4 rounded-xl border-2 transition-all duration-300 text-left ${
                                         selectedService === index
                                             ? 'bg-primary/20 border-primary shadow-lg shadow-primary/30 scale-105'
                                             : 'bg-background-dark/50 border-primary/20 hover:border-primary/50'
                                     }`}
                                 >
-                                    <span className={`material-symbols-outlined text-4xl mb-2 block ${
+                                    <span className={`material-symbols-outlined text-3xl sm:text-4xl mb-1 sm:mb-2 block ${
                                         selectedService === index ? 'text-primary' : 'text-text-dark/50'
                                     }`}>{service.icon}</span>
-                                    <h3 className="font-display font-bold text-text-dark text-sm">{service.title}</h3>
+                                    <h3 className="font-display font-bold text-text-dark text-xs sm:text-sm leading-tight">{service.title}</h3>
                                 </button>
                             ))}
                         </div>
@@ -339,6 +402,100 @@ const Services: React.FC = () => {
                 </div>
             </section>
 
+            {/* FAQ Section */}
+            <section className="py-20 bg-background-dark/20">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-4xl mx-auto">
+                        <h2 className="text-3xl md:text-4xl font-bold text-text-dark mb-4 font-display text-center">
+                            Preguntas <span className="text-primary">Frecuentes</span>
+                        </h2>
+                        <p className="text-text-dark/70 text-center mb-12 text-lg">Todo lo que necesitas saber sobre nuestros servicios</p>
+                        
+                        <div className="space-y-4">
+                            <details className="bg-background-dark/50 rounded-xl p-6 hud-overlay backdrop-blur-sm group">
+                                <summary className="font-display font-bold text-text-dark text-lg cursor-pointer list-none flex items-center justify-between">
+                                    <span>¿Qué servicios de desarrollo de software ofrece Dunatech?</span>
+                                    <span className="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+                                </summary>
+                                <p className="text-text-dark/70 mt-4 leading-relaxed">Dunatech ofrece servicios de desarrollo de aplicaciones web y de escritorio, optimización de bases de datos, integración de sistemas (APIs, webhooks), investigación y diseño UX, quality assurance (QA) y testing, además de documentación técnica y capacitación. Nos especializamos en soluciones a medida para pymes en Chile.</p>
+                            </details>
+
+                            <details className="bg-background-dark/50 rounded-xl p-6 hud-overlay backdrop-blur-sm group">
+                                <summary className="font-display font-bold text-text-dark text-lg cursor-pointer list-none flex items-center justify-between">
+                                    <span>¿Pueden modernizar aplicaciones legacy en Visual Basic o VB6?</span>
+                                    <span className="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+                                </summary>
+                                <p className="text-text-dark/70 mt-4 leading-relaxed">Sí, en Dunatech somos especialistas en modernizar código legacy de Visual Basic 6 (VB6) y Visual Basic .NET a tecnologías modernas como .NET Core, C# y aplicaciones web con React. Migramos tu aplicación de escritorio sin perder funcionalidad y mejorando el rendimiento.</p>
+                            </details>
+
+                            <details className="bg-background-dark/50 rounded-xl p-6 hud-overlay backdrop-blur-sm group">
+                                <summary className="font-display font-bold text-text-dark text-lg cursor-pointer list-none flex items-center justify-between">
+                                    <span>¿Cómo pueden ayudarme a integrar mis sistemas empresariales?</span>
+                                    <span className="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+                                </summary>
+                                <p className="text-text-dark/70 mt-4 leading-relaxed">Conectamos tus sistemas existentes (ERP, CRM, WMS, e-commerce) mediante APIs REST, SOAP, Web Services y herramientas de automatización como Make, n8n y Zapier. Eliminamos la entrada manual de datos y sincronizamos información en tiempo real para mejorar tu eficiencia operacional.</p>
+                            </details>
+
+                            <details className="bg-background-dark/50 rounded-xl p-6 hud-overlay backdrop-blur-sm group">
+                                <summary className="font-display font-bold text-text-dark text-lg cursor-pointer list-none flex items-center justify-between">
+                                    <span>¿Qué incluye el servicio de optimización de bases de datos?</span>
+                                    <span className="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+                                </summary>
+                                <p className="text-text-dark/70 mt-4 leading-relaxed">Nuestro servicio incluye implementación de índices estratégicos, refactorización de procedimientos almacenados, optimización de consultas SQL, actualización de lógica de negocio obsoleta, migración de datos sin tiempo de inactividad y monitoreo continuo de rendimiento. Trabajamos con MS SQL Server, PostgreSQL, MySQL y MongoDB.</p>
+                            </details>
+
+                            <details className="bg-background-dark/50 rounded-xl p-6 hud-overlay backdrop-blur-sm group">
+                                <summary className="font-display font-bold text-text-dark text-lg cursor-pointer list-none flex items-center justify-between">
+                                    <span>¿Ofrecen servicios de Quality Assurance (QA) y testing?</span>
+                                    <span className="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+                                </summary>
+                                <p className="text-text-dark/70 mt-4 leading-relaxed">Sí, ofrecemos QA funcional con perspectiva de usuario, testing de usabilidad y accesibilidad (WCAG), pruebas cross-browser y cross-device, testing de regresión y end-to-end. Detectamos errores antes del lanzamiento para garantizar una experiencia impecable y reducir tickets de soporte.</p>
+                            </details>
+
+                            <details className="bg-background-dark/50 rounded-xl p-6 hud-overlay backdrop-blur-sm group">
+                                <summary className="font-display font-bold text-text-dark text-lg cursor-pointer list-none flex items-center justify-between">
+                                    <span>¿Cuánto tiempo toma un proyecto de desarrollo de software?</span>
+                                    <span className="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+                                </summary>
+                                <p className="text-text-dark/70 mt-4 leading-relaxed">Los tiempos varían según la complejidad del proyecto. Un prototipo rápido (MVP) puede estar listo en 2-4 semanas, mientras que desarrollos más complejos como sistemas ERP o integraciones personalizadas pueden tomar entre 2-6 meses. Trabajamos con metodologías ágiles con entregas incrementales para que veas progreso constante.</p>
+                            </details>
+
+                            <details className="bg-background-dark/50 rounded-xl p-6 hud-overlay backdrop-blur-sm group">
+                                <summary className="font-display font-bold text-text-dark text-lg cursor-pointer list-none flex items-center justify-between">
+                                    <span>¿Qué es la investigación UX y por qué es importante?</span>
+                                    <span className="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+                                </summary>
+                                <p className="text-text-dark/70 mt-4 leading-relaxed">La investigación UX consiste en estudiar las necesidades reales de tus usuarios mediante entrevistas, testing de usabilidad y análisis de comportamiento. Es importante porque te permite crear productos que los usuarios realmente necesitan y aman, reduciendo tasas de abandono hasta un 45% y aumentando conversiones significativamente.</p>
+                            </details>
+
+                            <details className="bg-background-dark/50 rounded-xl p-6 hud-overlay backdrop-blur-sm group">
+                                <summary className="font-display font-bold text-text-dark text-lg cursor-pointer list-none flex items-center justify-between">
+                                    <span>¿Ofrecen soporte y mantenimiento después del desarrollo?</span>
+                                    <span className="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+                                </summary>
+                                <p className="text-text-dark/70 mt-4 leading-relaxed">Sí, ofrecemos servicios de soporte técnico, mantenimiento correctivo y evolutivo, además de capacitación continua para tu equipo. También proporcionamos documentación técnica completa para que puedas gestionar el sistema de forma autónoma si lo prefieres.</p>
+                            </details>
+
+                            <details className="bg-background-dark/50 rounded-xl p-6 hud-overlay backdrop-blur-sm group">
+                                <summary className="font-display font-bold text-text-dark text-lg cursor-pointer list-none flex items-center justify-between">
+                                    <span>¿Trabajan con metodologías ágiles?</span>
+                                    <span className="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+                                </summary>
+                                <p className="text-text-dark/70 mt-4 leading-relaxed">Sí, en Dunatech trabajamos con metodologías ágiles (Scrum/Kanban) que permiten entregas incrementales, feedback constante y adaptación rápida a cambios. Esto te garantiza transparencia total del proceso, entregas frecuentes y la flexibilidad de ajustar el rumbo cuando sea necesario.</p>
+                            </details>
+
+                            <details className="bg-background-dark/50 rounded-xl p-6 hud-overlay backdrop-blur-sm group">
+                                <summary className="font-display font-bold text-text-dark text-lg cursor-pointer list-none flex items-center justify-between">
+                                    <span>¿Cuál es el costo de los servicios de desarrollo de Dunatech?</span>
+                                    <span className="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+                                </summary>
+                                <p className="text-text-dark/70 mt-4 leading-relaxed">Los costos varían según el alcance y complejidad de cada proyecto. Ofrecemos una consultoría gratuita inicial donde analizamos tus necesidades y entregamos una cotización detallada sin compromiso. Contáctanos para agendar tu consulta y conocer opciones adaptadas a tu presupuesto.</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* All Services Overview */}
             <section className="py-20 bg-background-dark/30">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -369,6 +526,32 @@ const Services: React.FC = () => {
                     </div>
                 </div>
             </section>
+
+            {/* Related Content */}
+            <RelatedContent
+                title="Continúa Explorando"
+                subtitle="Conoce más sobre Dunatech"
+                links={[
+                    {
+                        title: 'Sobre Nosotros',
+                        description: 'Conoce al equipo detrás de las soluciones: experiencia, valores y especializaciones.',
+                        link: '/sobre-nosotros',
+                        icon: 'groups'
+                    },
+                    {
+                        title: 'Casos de Éxito',
+                        description: 'Descubre proyectos reales donde hemos aplicado nuestros servicios.',
+                        link: '/aplicaciones',
+                        icon: 'work'
+                    },
+                    {
+                        title: 'Blog y Recursos',
+                        description: 'Artículos, guías y recursos sobre desarrollo de software y tecnología.',
+                        link: '/blog',
+                        icon: 'article'
+                    }
+                ]}
+            />
         </>
     );
 };

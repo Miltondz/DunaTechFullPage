@@ -9,9 +9,12 @@ const Hero: React.FC = () => {
                 <div className="max-w-5xl mx-auto">
                     <div className="animate-fadeIn text-center">
                         {/* Trust Badge - Credibilidad inmediata */}
-                        <div className="inline-flex items-center gap-2 bg-primary/20 backdrop-blur-sm px-4 py-2 rounded-full border border-primary/40 mb-6">
-                            <span className="material-symbols-outlined text-primary text-lg">verified</span>
-                            <span className="text-text-dark text-sm font-display font-semibold">+50 Proyectos Exitosos · Empresa Joven en Chile</span>
+                        <div className="inline-flex items-center gap-2 bg-primary/20 backdrop-blur-sm px-3 sm:px-4 py-2 rounded-full border border-primary/40 mb-6">
+                            <span className="material-symbols-outlined text-primary text-base sm:text-lg">verified</span>
+                            <span className="text-text-dark text-xs sm:text-sm font-display font-semibold">
+                                <span className="hidden sm:inline">Empresa Joven en Chile · Soluciones TI Profesionales</span>
+                                <span className="sm:hidden">Empresa Chilena · Soluciones TI</span>
+                            </span>
                         </div>
 
                         {/* Propuesta de Valor Clara - "¿Qué hacemos?" */}
@@ -22,50 +25,52 @@ const Hero: React.FC = () => {
                         
                         {/* Subtítulo - Propuesta de valor específica */}
                         <p className="text-lg sm:text-xl md:text-2xl mb-6 text-light-blue font-display font-semibold">
-                            Software a Medida · Integración de Sistemas · Consultoría Informática
+                            <Link to="/servicios" className="hover:text-primary transition-colors">Software a Medida</Link> · <Link to="/servicios" className="hover:text-primary transition-colors">Integración de Sistemas</Link> · <Link to="/servicios" className="hover:text-primary transition-colors">Consultoría Informática</Link>
                         </p>
                         
                         {/* "¿Es para mí?" - Identificación del cliente ideal */}
                         <p className="text-base md:text-lg mb-8 text-text-dark/90 max-w-3xl mx-auto font-body leading-relaxed">
-                            Fábrica de software joven especializada en desarrollo a medida, integraciones y consultoría TI para pymes.
-                            <span className="block mt-2 text-primary font-semibold">Metodologías ágiles, tecnologías modernas y soporte 24/7.</span>
+                            Fábrica de software joven especializada en <Link to="/servicios" className="text-white hover:text-primary underline transition-colors">desarrollo a medida</Link>, <Link to="/servicios" className="text-white hover:text-primary underline transition-colors">integraciones</Link> y <Link to="/servicios" className="text-white hover:text-primary underline transition-colors">consultoría TI</Link> para pymes.
+                            <span className="block mt-2 text-primary font-semibold">Metodologías ágiles, tecnologías modernas y acompañamiento profesional. <Link to="/sobre-nosotros" className="hover:text-light-blue transition-colors">Conócenos más</Link>.</span>
                         </p>
 
                         {/* CTAs Principales - "¿Qué debo hacer ahora?" */}
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8">
                             <Link 
                                 to="/contacto" 
-                                className="group inline-flex items-center justify-center bg-primary text-white font-bold rounded-lg py-4 px-8 hover:bg-light-blue transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/40 text-lg"
+                                className="group inline-flex items-center justify-center bg-primary text-white font-bold rounded-lg py-3 sm:py-4 px-6 sm:px-8 hover:bg-light-blue transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/40 text-base sm:text-lg"
                             >
-                                <span className="material-symbols-outlined text-2xl mr-2 group-hover:animate-pulse">send</span>
-                                Solicitar Consultoría Gratuita
+                                <span className="material-symbols-outlined text-xl sm:text-2xl mr-2 group-hover:animate-pulse">send</span>
+                                <span className="hidden sm:inline">Solicitar Consultoría Gratuita</span>
+                                <span className="sm:hidden">Consultoría Gratis</span>
                             </Link>
                             <Link 
                                 to="/servicios" 
-                                className="inline-flex items-center justify-center border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-lg py-4 px-8 font-bold transition-all duration-300 hover:scale-105 text-lg"
+                                className="inline-flex items-center justify-center border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-lg py-3 sm:py-4 px-6 sm:px-8 font-bold transition-all duration-300 hover:scale-105 text-base sm:text-lg"
                             >
-                                <span className="material-symbols-outlined text-2xl mr-2">explore</span>
-                                Ver Nuestros Servicios
+                                <span className="material-symbols-outlined text-xl sm:text-2xl mr-2">explore</span>
+                                <span className="hidden sm:inline">Ver Nuestros Servicios</span>
+                                <span className="sm:hidden">Ver Servicios</span>
                             </Link>
                         </div>
 
                         {/* Indicadores de confianza - Social proof rápido */}
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto mt-12">
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 max-w-4xl mx-auto mt-12">
                             <div className="bg-background-dark/50 backdrop-blur-sm rounded-lg p-4 border border-primary/20">
                                 <div className="text-3xl md:text-4xl font-bold text-primary font-heading">100%</div>
                                 <div className="text-sm md:text-base text-text-dark/70 font-display">Satisfacción</div>
                             </div>
                             <div className="bg-background-dark/50 backdrop-blur-sm rounded-lg p-4 border border-primary/20">
-                                <div className="text-3xl md:text-4xl font-bold text-light-blue font-heading">24/7</div>
-                                <div className="text-sm md:text-base text-text-dark/70 font-display">Soporte</div>
+                                <div className="text-3xl md:text-4xl font-bold text-light-blue font-heading">100%</div>
+                                <div className="text-sm md:text-base text-text-dark/70 font-display">Profesional</div>
                             </div>
                             <div className="bg-background-dark/50 backdrop-blur-sm rounded-lg p-4 border border-primary/20">
                                 <div className="text-3xl md:text-4xl font-bold text-light-green font-heading">5+</div>
                                 <div className="text-sm md:text-base text-text-dark/70 font-display">Años Exp.</div>
                             </div>
                             <div className="bg-background-dark/50 backdrop-blur-sm rounded-lg p-4 border border-primary/20">
-                                <div className="text-3xl md:text-4xl font-bold text-primary font-heading">50+</div>
-                                <div className="text-sm md:text-base text-text-dark/70 font-display">Proyectos</div>
+                                <div className="text-3xl md:text-4xl font-bold text-primary font-heading">13+</div>
+                                <div className="text-sm md:text-base text-text-dark/70 font-display">Años Exp.</div>
                             </div>
                         </div>
                     </div>

@@ -5,6 +5,7 @@ import HeroImage from '../components/HeroImage';
 import Teasers from '../components/Teasers';
 import Testimonials from '../components/Testimonials';
 import Carousel from '../components/Carousel';
+import RelatedContent from '../components/RelatedContent';
 
 const HomePage: React.FC = () => {
     useEffect(() => {
@@ -67,6 +68,32 @@ const HomePage: React.FC = () => {
                     </div>
                 </div>
             </section>
+
+            {/* Related Content - Internal Linking */}
+            <RelatedContent
+                title="Descubre Más"
+                subtitle="Explora todo lo que Dunatech tiene para ofrecer"
+                links={[
+                    {
+                        title: 'Nuestros Servicios',
+                        description: 'Desarrollo a medida, integración de sistemas, UX research, QA y más servicios profesionales.',
+                        link: '/servicios',
+                        icon: 'build'
+                    },
+                    {
+                        title: 'Sobre Nosotros',
+                        description: 'Conoce al equipo, nuestra historia, valores y especializaciones en tecnología.',
+                        link: '/sobre-nosotros',
+                        icon: 'groups'
+                    },
+                    {
+                        title: 'Casos de Éxito',
+                        description: 'Proyectos reales que demuestran nuestras capacidades y experiencia.',
+                        link: '/aplicaciones',
+                        icon: 'work'
+                    }
+                ]}
+            />
         </>
     );
 };

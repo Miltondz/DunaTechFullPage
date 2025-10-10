@@ -4,21 +4,38 @@ import { CarouselSlide } from '../types';
 const slides: CarouselSlide[] = [
     {
         id: 1,
-        imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuA1gUXeWeyet7bX25Vd2T1S9-oaWHDtN_cYq7ulEsckw2QmJGQea_ONJtsumQdd3NoHd5hI2fGeRYj7j3NdBSN9QJir49na8lXM0QBCS5dwwdHNw38-hWFKn4Q0DvaH29vkHS4kPMMZAnXZGHxN0L2rKiuTDj_1dbvHKICnBu4C4B6kVeZaVpCAm6kwuGGtl48cxaDEMAhItny4pR5LTHiJlSPdn3NzMwbJoedheKgIy6afXp1dNi1TsQyK2nX64YaC6IHmb58ewIo",
+        imageUrl: "/images/Software_a_la_medida.jpg",
         title: "Desarrollo de Software a Medida",
-        description: "Creamos soluciones de software personalizadas que se alinean perfectamente con los objetivos de tu negocio, optimizando procesos y potenciando el crecimiento."
+        description: "Desarrollo de aplicaciones web, de escritorio y móviles personalizadas. Modernización de código legacy VB6 a .NET. Prototipado rápido para validar ideas antes de invertir.",
+        alt: "Desarrollo de software a medida para empresas en Chile - Aplicaciones web y móviles personalizadas | Dunatech"
     },
     {
         id: 2,
-        imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuB0sVs3ERsnSN3gj8mENwGsCA62yIda7vgX65IESy1C_FsL8chMGYAFM1wZqyIjnYyv1OS-uEXWJ2gX8NFK1talOX__PobSEyCTK9jUDMj8nF2c1hegf_Up2ikOzmQaq9drbZTAW0Yi7CfYNzLGYRBOuMQwPehVBBxZlUNCzTzv3BZ6zMZ_rYpyScNBbPG5evbC-8OeV5NGwasQnuCInwHYbMYkaXZkxNx2c5X9KeKY9RdyaRyWKVwGmvh-q3dx7mDYFWAs3nW48pU",
-        title: "Consultoría Tecnológica",
-        description: "Nuestros expertos te guían para adoptar las tecnologías más adecuadas que impulsen tu estrategia y te mantengan a la vanguardia."
+        imageUrl: "/images/Investigacion_UX.jpg",
+        title: "Investigación UX y Quality Assurance",
+        description: "Testing de usabilidad, investigación de usuarios y diseño UX/UI. QA profesional con testing cross-browser y accesibilidad WCAG. Reduce abandono hasta 45% y errores en 62%.",
+        alt: "Investigación UX y testing de usabilidad profesional - Diseño centrado en usuarios y QA | Dunatech Chile"
     },
     {
         id: 3,
-        imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuB0sVs3ERsnSN3gj8mENwGsCA62yIda7vgX65IESy1C_FsL8chMGYAFM1wZqyIjnYyv1OS-uEXWJ2gX8NFK1talOX__PobSEyCTK9jUDMj8nF2c1hegf_Up2ikOzmQaq9drbZTAW0Yi7CfYNzLGYRBOuMQwPehVBBxZlUNCzTzv3BZ6zMZ_rYpyScNBbPG5evbC-8OeV5NGwasQnuCInwHYbMYkaXZkxNx2c5X9KeKY9RdyaRyWKVwGmvh-q3dx7mDYFWAs3nW48pU",
-        title: "Soluciones en la Nube",
-        description: "Migramos, gestionamos y optimizamos tu infraestructura en la nube para garantizar escalabilidad, seguridad y eficiencia."
+        imageUrl: "/images/Integracion_BD.jpg",
+        title: "Integración y Bases de Datos",
+        description: "Integración de sistemas con APIs REST, SOAP y Web Services. Optimización de bases de datos y procedimientos almacenados. Automatización con Make y n8n.",
+        alt: "Integración de sistemas y optimización de bases de datos - APIs REST, SOAP y automatización | Dunatech"
+    },
+    {
+        id: 4,
+        imageUrl: "/images/Implementación_IA.jpg",
+        title: "Consultoría e Implementación con IA",
+        description: "Consultoría e implementación de soluciones de Inteligencia Artificial. Machine Learning, automatización inteligente y análisis predictivo para optimizar tu negocio con tecnología de vanguardia.",
+        alt: "Consultoría e implementación de Inteligencia Artificial - Machine Learning y automatización inteligente para empresas | Dunatech Chile"
+    },
+    {
+        id: 5,
+        imageUrl: "/images/SystemasLegacy.jpg",
+        title: "Modernización de Sistemas Legacy",
+        description: "Modernización de aplicaciones VB6, Visual Basic y sistemas heredados. Mantenimiento preventivo, actualizaciones de seguridad y migración a tecnologías actuales sin perder funcionalidad.",
+        alt: "Modernización de sistemas legacy VB6 y Visual Basic - Migración a tecnologías modernas sin pérdida de datos | Dunatech Chile"
     }
 ];
 
@@ -53,7 +70,12 @@ const Carousel: React.FC = () => {
             {slides.map((slide, index) => (
                 <div key={slide.id} className={`grid-cols-1 md:grid-cols-2 gap-8 items-center ${index === currentIndex ? 'grid animate-fadeIn' : 'hidden'}`}>
                     <div className="aspect-video w-full overflow-hidden rounded-xl border border-primary/20 shadow-[0_0_20px_theme(colors.primary/0.2)]">
-                        <div className="h-full w-full bg-cover bg-center" style={{ backgroundImage: `url("${slide.imageUrl}")` }}></div>
+                        <img 
+                            src={slide.imageUrl} 
+                            alt={slide.alt || slide.title}
+                            className="h-full w-full object-cover"
+                            loading="lazy"
+                        />
                     </div>
                     <div className="flex flex-col">
                         <h3 className="font-display text-2xl font-bold text-dark-blue dark:text-text-dark">{slide.title}</h3>
