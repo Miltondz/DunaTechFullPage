@@ -25,9 +25,9 @@ const Services: React.FC = () => {
             icon: 'database',
             title: 'Arquitectura y Optimización de Bases de Datos',
             subtitle: 'Datos rápidos, seguros y escalables',
-            description: 'Transformamos tu información en un activo estratégico mediante arquitecturas de bases de datos optimizadas y escalables.',
-            problem: '¿Tus consultas son lentas? ¿Tus reportes y consultas están desactualizados? ¿Necesitas implementar nueva lógica de negocio o modificar la existente?',
-            solution: 'Optimizamos consultas, actualizamos procedimientos almacenados y adaptamos tu base de datos a nuevos requerimientos de negocio con rapidez y precisión.',
+            description: 'Con más de 20 años trabajando con sistemas empresariales y 4+ años en integraciones bancarias de alta complejidad, transformamos tu información en un activo estratégico.',
+            problem: '¿Tus consultas son lentas? ¿Tus reportes están desactualizados? ¿Necesitas implementar nueva lógica de negocio o modificar procedimientos almacenados críticos?',
+            solution: 'Optimizamos consultas, refactorizamos stored procedures y adaptamos tu base de datos a nuevos requerimientos de negocio con la precisión que solo da la experiencia real en sistemas críticos.',
             benefits: [
                 'Reduce tiempos de respuesta hasta 10x más rápido',
                 'Ahorra costos en infraestructura con optimización inteligente',
@@ -117,10 +117,10 @@ const Services: React.FC = () => {
         {
             icon: 'psychology',
             title: 'Investigación y Diseño UX',
-            subtitle: 'Experiencia de usuario centrada en personas',
-            description: 'Investigamos y diseñamos experiencias digitales excepcionales mediante metodologías UX profesionales que garantizan que tu producto resuelva las necesidades reales de tus usuarios.',
+            subtitle: 'Experiencia de usuario con perspectiva antropológica',
+            description: 'Liderado por especialista con formación en antropología e investigación de usuarios, diseñamos experiencias digitales que realmente conectan con las personas y resuelven necesidades reales.',
             problem: '¿Tus usuarios abandonan tu aplicación? ¿No sabes qué necesitan realmente? ¿Tu diseño no convierte como esperas?',
-            solution: 'Aplicamos investigación de usuarios, testing de usabilidad y diseño centrado en personas para crear experiencias que los usuarios aman y que generan resultados medibles.',
+            solution: 'Combinamos metodologías de investigación cualitativa con diseño centrado en personas para crear experiencias que los usuarios adoptan con éxito y que generan resultados medibles.',
             benefits: [
                 'Reduce tasas de abandono hasta un 45%',
                 'Aumenta conversiones y satisfacción del usuario',
@@ -148,10 +148,10 @@ const Services: React.FC = () => {
         {
             icon: 'verified',
             title: 'Quality Assurance y Testing',
-            subtitle: 'Calidad garantizada en cada detalle',
-            description: 'Aseguramos la calidad de tu software mediante testing exhaustivo y QA profesional, detectando errores antes de que lleguen a tus usuarios y garantizando una experiencia impecable.',
-            problem: '¿Tu aplicación tiene errores frecuentes? ¿Pierdes clientes por problemas técnicos? ¿Necesitas garantizar calidad antes del lanzamiento?',
-            solution: 'Ejecutamos testing funcional, de usabilidad y compatibilidad, combinando QA técnico con evaluación de experiencia de usuario para entregar productos robustos y confiables.',
+            subtitle: 'Calidad con perspectiva humana',
+            description: 'QA profesional que va más allá de lo técnico: combinamos testing exhaustivo con perspectiva antropológica para garantizar que tu software no solo funcione, sino que sea adoptado con éxito.',
+            problem: '¿Tu aplicación tiene errores frecuentes? ¿Pierdes clientes por problemas técnicos? ¿Tu equipo no adopta las herramientas que implementas?',
+            solution: 'Ejecutamos testing funcional con enfoque en usabilidad real, combinando QA técnico con evaluación de experiencia humana para entregar productos robustos que las personas realmente usan.',
             benefits: [
                 'Detecta y corrige errores antes del lanzamiento',
                 'Reduce tickets de soporte hasta en 62%',
@@ -206,6 +206,37 @@ const Services: React.FC = () => {
                 'Onboarding de equipos de desarrollo'
             ],
             visualColor: 'from-primary via-light-blue to-light-green'
+        },
+        {
+            icon: 'smart_toy',
+            title: 'Inteligencia Artificial Aplicada',
+            subtitle: 'IA que resuelve problemas reales',
+            description: 'Implementamos soluciones de IA validadas en hackathons nacionales e internacionales. Desde análisis de documentos hasta automatización inteligente, llevamos la IA del concepto a la producción.',
+            problem: '¿Quieres implementar IA pero no sabes por dónde empezar? ¿Tus procesos manuales consumen demasiado tiempo? ¿Necesitas analizar datos complejos de forma automática?',
+            solution: 'Diseñamos e implementamos soluciones de IA práctica: análisis de documentos, procesamiento de lenguaje natural, automatización de reportes y asistentes inteligentes adaptados a tu operación.',
+            benefits: [
+                'Automatiza tareas repetitivas con precisión',
+                'Analiza documentos y extrae información clave automáticamente',
+                'Reduce tiempos de proceso de horas a segundos',
+                'Implementación validada en competencias nacionales (CChC)',
+                'IA accesible para PYMEs, no solo grandes empresas'
+            ],
+            features: [
+                'Análisis de documentos con IA (PDFs, imágenes, audio)',
+                'Chatbots y asistentes inteligentes',
+                'Procesamiento de lenguaje natural en español',
+                'Automatización de reportes y análisis',
+                'Integración con Google Gemini y OpenAI',
+                'Soluciones offline-first para trabajo en terreno'
+            ],
+            technologies: ['Google Gemini', 'OpenAI', 'LangChain', 'Python', 'TensorFlow', 'Hugging Face'],
+            useCases: [
+                'Análisis automático de incidentes de seguridad (PREVIO)',
+                'Asistentes de rehabilitación con gamificación (RehabiliA)',
+                'Procesamiento de facturas y documentos',
+                'Generación automática de reportes de cumplimiento'
+            ],
+            visualColor: 'from-light-blue to-primary'
         }
     ];
 
@@ -221,7 +252,7 @@ const Services: React.FC = () => {
                             Nuestros <span className="text-primary">Servicios</span>
                         </h1>
                         <p className="text-xl md:text-2xl text-text-dark/80 leading-relaxed">
-                            Soluciones tecnológicas que resuelven problemas reales y generan valor medible para tu negocio
+                            20+ años de experiencia corporativa combinados con innovación validada en hackathons nacionales e internacionales
                         </p>
                     </div>
                 </div>
@@ -230,22 +261,42 @@ const Services: React.FC = () => {
             {/* Service Navigation */}
             <section className="py-8 bg-background-dark/20">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="max-w-6xl mx-auto">
-                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
-                            {servicesData.map((service, index) => (
+                    <div className="max-w-7xl mx-auto">
+                        {/* First row: 4 services */}
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-4">
+                            {servicesData.slice(0, 4).map((service, index) => (
                                 <button
                                     key={index}
                                     onClick={() => setSelectedService(index)}
-                                    className={`p-3 sm:p-4 rounded-xl border-2 transition-all duration-300 text-left ${
+                                    className={`p-4 sm:p-5 rounded-xl border-2 transition-all duration-300 text-center group ${
                                         selectedService === index
                                             ? 'bg-primary/20 border-primary shadow-lg shadow-primary/30 scale-105'
-                                            : 'bg-background-dark/50 border-primary/20 hover:border-primary/50'
+                                            : 'bg-background-dark/50 border-primary/20 hover:border-primary/50 hover:bg-background-dark/70'
                                     }`}
                                 >
-                                    <span className={`material-symbols-outlined text-3xl sm:text-4xl mb-1 sm:mb-2 block ${
-                                        selectedService === index ? 'text-primary' : 'text-text-dark/50'
+                                    <span className={`material-symbols-outlined text-3xl sm:text-4xl mb-2 block transition-transform group-hover:scale-110 ${
+                                        selectedService === index ? 'text-primary' : 'text-text-dark/60'
                                     }`}>{service.icon}</span>
-                                    <h3 className="font-display font-bold text-text-dark text-xs sm:text-sm leading-tight">{service.title}</h3>
+                                    <h3 className="font-display font-bold text-text-dark text-xs sm:text-sm leading-tight line-clamp-2">{service.title}</h3>
+                                </button>
+                            ))}
+                        </div>
+                        {/* Second row: 3 services centered */}
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 max-w-4xl mx-auto">
+                            {servicesData.slice(4).map((service, index) => (
+                                <button
+                                    key={index + 4}
+                                    onClick={() => setSelectedService(index + 4)}
+                                    className={`p-4 sm:p-5 rounded-xl border-2 transition-all duration-300 text-center group ${
+                                        selectedService === index + 4
+                                            ? 'bg-primary/20 border-primary shadow-lg shadow-primary/30 scale-105'
+                                            : 'bg-background-dark/50 border-primary/20 hover:border-primary/50 hover:bg-background-dark/70'
+                                    } ${index === 2 ? 'col-span-2 md:col-span-1' : ''}`}
+                                >
+                                    <span className={`material-symbols-outlined text-3xl sm:text-4xl mb-2 block transition-transform group-hover:scale-110 ${
+                                        selectedService === index + 4 ? 'text-primary' : 'text-text-dark/60'
+                                    }`}>{service.icon}</span>
+                                    <h3 className="font-display font-bold text-text-dark text-xs sm:text-sm leading-tight line-clamp-2">{service.title}</h3>
                                 </button>
                             ))}
                         </div>
@@ -287,28 +338,12 @@ const Services: React.FC = () => {
                             {/* Visual Representation */}
                             <div className="relative">
                                 <div className={`absolute -inset-4 bg-gradient-to-br ${selectedServiceData.visualColor} rounded-2xl blur-2xl opacity-30`}></div>
-                                <div className="relative bg-background-dark/80 rounded-2xl p-8 hud-overlay backdrop-blur-sm">
-                                    <svg viewBox="0 0 400 300" className="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
-                                        <defs>
-                                            <linearGradient id={`grad-${selectedService}`} x1="0%" y1="0%" x2="100%" y2="100%">
-                                                <stop offset="0%" style={{ stopColor: '#FF9500', stopOpacity: 0.8 }} />
-                                                <stop offset="100%" style={{ stopColor: '#4FC3F7', stopOpacity: 0.8 }} />
-                                            </linearGradient>
-                                        </defs>
-                                        
-                                        {/* Dynamic illustration based on service */}
-                                        <g className="animate-float">
-                                            <rect x="50" y="50" width="300" height="200" rx="15" fill="rgba(26,35,50,0.5)" stroke={`url(#grad-${selectedService})`} strokeWidth="3"/>
-                                            <circle cx="200" cy="150" r="60" fill={`url(#grad-${selectedService})`} opacity="0.3">
-                                                <animate attributeName="r" values="60;70;60" dur="3s" repeatCount="indefinite"/>
-                                            </circle>
-                                            {[...Array(8)].map((_, i) => (
-                                                <circle key={i} cx={100 + i * 30} cy={100 + Math.sin(i) * 20} r="4" fill="#FF9500" opacity="0.6">
-                                                    <animate attributeName="cy" values={`${100 + Math.sin(i) * 20};${120 + Math.sin(i) * 20};${100 + Math.sin(i) * 20}`} dur="2s" repeatCount="indefinite"/>
-                                                </circle>
-                                            ))}
-                                        </g>
-                                    </svg>
+                                <div className="relative bg-background-dark/80 rounded-2xl overflow-hidden hud-overlay backdrop-blur-sm">
+                                    <img 
+                                        src="/images/servicios001.png" 
+                                        alt={`${selectedServiceData.title} - Servicios Dunatech`}
+                                        className="w-full h-auto object-cover"
+                                    />
                                 </div>
                             </div>
                         </div>

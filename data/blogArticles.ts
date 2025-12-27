@@ -55,6 +55,84 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
     {
+        id: 'hackathon-seguridad-sin-papeleo-cchc',
+        title: 'Hackathon: 24 Horas de Pura Innovación en el Desafío "Seguridad sin Papeleo"',
+        slug: 'hackathon-seguridad-sin-papeleo-cchc',
+        excerpt: 'Crónica de nuestra primera participación en la Hackathon #SeguridadsinPapeleo de la Cámara Chilena de la Construcción. 24 horas de código, IA y adrenalina que nos llevaron al Top 10 nacional.',
+        content: `
+# Hackathon: 24 Horas de Pura Innovación
+
+## El Desafío "Seguridad sin Papeleo"
+
+De 5:00 p.m. a 5:00 p.m. del día siguiente. En papel suena a un reto típico de programación, ¿no? Pero vivirlo en la **Hackathon #SeguridadsinPapeleo** —organizada por la **Cámara Chilena de la Construcción** y **CommunityOS** en el Hub Providencia — fue otra historia completamente distinta. Especialmente porque era la **primera participación de Duna Tech**, nuestra infante y pequeña empresa de software factory y consultoría, en un desafío de esta magnitud.
+
+Desde el primer minuto sentimos la intensidad. Equipos súper preparados, cada uno con su propia visión para atacar un problema que duele de verdad en la industria: **hoy un prevencionista de riesgos pasa el 75% de su tiempo llenando papeles** y solo un 25% en terreno, donde realmente se previenen los accidentes.
+
+
+## SST Ágil: Nuestra Propuesta
+
+Con **SST Ágil** nos propusimos voltear esa ecuación. Queríamos lograr que el **90% del tiempo fuera operacional**, en la obra, con la gente. Teníamos claro que el nuevo **Decreto Supremo N° 44** —vigente desde febrero— exige una gestión preventiva más proactiva, algo que muchas PYMEs constructoras simplemente no pueden cubrir por falta de recursos.
+
+### Funcionalidades Clave Desarrolladas en 24 Horas:
+
+1. **Captura Rápida con IA**
+   - Transformación de audio en análisis completo de causa raíz
+   - Procesamiento en segundos usando Google Gemini
+   - Generación automática de documentación DS N° 44
+
+2. **Interfaz Ultra-Simple**
+   - Diseñada para uso en terreno con guantes
+   - Modo offline-first para zonas sin conectividad
+   - Flujo de un solo botón para reportar incidentes
+
+3. **Dashboard en Tiempo Real**
+   - Mapas de calor de incidentes
+   - Alertas preventivas automáticas
+   - Métricas de cumplimiento normativo
+
+## La Madrugada Decisiva
+
+Llegó la madrugada y el cansancio empezó a pesar. Pero cada vez que veíamos funcionar nuestra **Captura Rápida asistida por IA** —capaz de transformar un audio en un análisis completo de causa raíz en segundos— nos recargábamos. 
+
+**No estábamos solo armando una app; estábamos digitalizando el ciclo preventivo de los trabajadores chilenos.**
+
+## Contra las Cuerdas
+
+Llegamos al deadline literalmente en el último segundo, después de sortear problemas técnicos que nos pusieron contra las cuerdas:
+
+- 🔥 Problemas de integración con la API de audio a las 3 AM
+- 🔥 Refactorización de emergencia del flujo de captura
+- 🔥 Optimización de prompts de IA bajo presión
+
+## El Resultado: Top 10 Nacional
+
+Pero valió cada minuto: **quedamos entre los 10 primeros equipos** de toda la competencia. Y ese reconocimiento nos dio el impulso exacto que necesitábamos para lo que venía después.
+
+### Lo Que Aprendimos:
+
+- ✅ La IA aplicada a seguridad laboral tiene un potencial enorme
+- ✅ El diseño centrado en el usuario real (prevencionista en obra) es clave
+- ✅ 24 horas son suficientes para crear un MVP funcional con el stack correcto
+- ✅ La presión extrema revela el verdadero nivel del equipo
+
+## ¿Qué Sigue?
+
+Este hackathon fue el nacimiento de lo que hoy es **PREVIO**, nuestra plataforma de seguridad ocupacional con IA. Lo que empezó como un prototipo de 24 horas ahora es un producto en desarrollo activo, con validación real de la industria.
+
+---
+
+**¿Tienes un desafío de innovación en seguridad laboral o compliance?** En Dunatech combinamos desarrollo ágil, IA y experiencia en normativa chilena para crear soluciones que realmente funcionan en terreno.
+        `,
+        author: 'Milton Díaz',
+        date: '2025-12-26',
+        category: 'Hackathon',
+        tags: ['Hackathon', 'CChC', 'Seguridad Laboral', 'IA', 'PREVIO', 'Innovación Chile', 'DS N°44'],
+        image: '/images/hack-seguridad-sin-papeleo01.jpg',
+        imageAlt: 'Equipo Dunatech participando en la Hackathon Seguridad sin Papeleo de la Cámara Chilena de la Construcción',
+        readTime: '5 min',
+        featured: true
+    },
+    {
         id: 'autotaller-pro-caso-de-exito',
         title: 'AutoTaller Pro: Software de Gestión para Talleres Mecánicos en Chile | Caso de Éxito',
         slug: 'autotaller-pro-caso-de-exito',

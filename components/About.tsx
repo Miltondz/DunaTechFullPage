@@ -30,19 +30,37 @@ const About: React.FC = () => {
                             </h2>
                             <div className="space-y-6 text-text-dark/80 text-lg leading-relaxed">
                                 <p>
-                                    Dunatech nació de una simple pero poderosa idea: <strong className="text-primary">la tecnología debe ser un catalizador para el crecimiento</strong>, no un obstáculo.
+                                    <strong className="text-primary">Dunatech</strong> no empieza desde cero; nace como la consolidación de décadas de trayectoria profesional puestas al servicio de un propósito común: <strong className="text-light-blue">que la tecnología sea un catalizador para el crecimiento</strong>, no un obstáculo.
                                 </p>
                                 <p>
-                                    Fundada por <strong className="text-primary">Milton Díaz</strong>, un ingeniero con más de 20 años de experiencia en desarrollo de software empresarial, nuestra empresa se construyó sobre los cimientos de resolver problemas reales de negocio con soluciones tecnológicas efectivas y sostenibles.
+                                    Nuestra empresa es el punto de encuentro de dos caminos sólidos. Fundada por <strong className="text-primary">Milton Díaz</strong>, ingeniero con más de 20 años de liderazgo en el sector corporativo y proyectos privados de software empresarial, Dunatech hereda la experiencia real de modernizar sistemas legacy críticos, diseñar arquitecturas WMS e integraciones bancarias de alta complejidad.
                                 </p>
                                 <p>
-                                    A lo largo de dos décadas, hemos especializado nuestra experiencia en la <Link to="/servicios" className="text-light-blue font-semibold hover:underline">modernización de sistemas legacy críticos</Link>, desarrollo de sistemas de gestión de almacenes (WMS), sistemas contables, integraciones bancarias y tiendas en línea. Esta experiencia práctica nos ha enseñado que cada negocio es único y requiere <Link to="/servicios" className="text-primary hover:underline">soluciones adaptadas a su realidad</Link>.
+                                    A esta robustez técnica se suma la visión de <strong className="text-light-green">María Alejandra Eggers</strong>, antropóloga y especialista en UX/QA. Su trayectoria en investigación de usuarios añade una dimensión humana esencial, garantizando que nuestras soluciones no solo funcionen a la perfección, sino que sean intuitivas y adoptadas con éxito por las personas.
                                 </p>
+                                <h3 className="text-2xl font-bold text-text-dark font-display mt-8 mb-4 flex items-center">
+                                    <span className="material-symbols-outlined text-primary mr-2">verified_user</span>
+                                    Innovación Validada en Escenarios Reales
+                                </h3>
                                 <p>
-                                    Hoy, <strong className="text-light-green">somos un equipo multidisciplinario</strong> que combina experiencia técnica profunda con una perspectiva centrada en el usuario. Con la incorporación de <strong className="text-light-blue">María Alejandra Eggers</strong>, antropóloga y <Link to="/servicios" className="text-light-blue hover:underline">especialista en UX/QA</Link>, agregamos una dimensión humana al desarrollo de software, asegurando que nuestras soluciones no solo funcionen bien, sino que también sean intuitivas y cumplan con las expectativas de los usuarios finales.
+                                    No solo proyectamos soluciones; las ponemos a prueba en los ecosistemas más exigentes. En nuestro primer año, hemos demostrado nuestra capacidad de ejecución en hitos clave:
                                 </p>
-                                <p>
-                                    Transformamos desafíos tecnológicos en ventajas competitivas, combinando experiencia local con estándares globales de calidad. <Link to="/contacto" className="text-primary font-semibold hover:underline">Conversemos sobre cómo podemos ayudarte</Link>.
+                                <ul className="space-y-4 ml-4">
+                                    <li className="flex items-start gap-3">
+                                        <span className="material-symbols-outlined text-primary text-xl mt-1 flex-shrink-0">emoji_events</span>
+                                        <span><strong className="text-primary">Finalistas Nacionales:</strong> Seleccionados entre los 6 mejores proyectos en el desafío de innovación de la Cámara Chilena de la Construcción con nuestra plataforma de IA, PREVIO.</span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <span className="material-symbols-outlined text-light-blue text-xl mt-1 flex-shrink-0">favorite</span>
+                                        <span><strong className="text-light-blue">Impacto Social en ETM Day 2025:</strong> Desarrollo de un MVP funcional para la Teletón en la hackathon de IA "LaBenditaIA", transformando tecnología compleja en esperanza.</span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <span className="material-symbols-outlined text-light-green text-xl mt-1 flex-shrink-0">public</span>
+                                        <span><strong className="text-light-green">Validación Global:</strong> Participación en la World's Largest Hackathon de Bolt, compitiendo con estándares internacionales de desarrollo rápido y escalable.</span>
+                                    </li>
+                                </ul>
+                                <p className="mt-6">
+                                    Transformamos desafíos tecnológicos en ventajas competitivas, combinando el rigor del mundo corporativo con la agilidad de la innovación moderna. <Link to="/contacto" className="text-primary font-semibold hover:underline">Conversemos sobre cómo podemos construir tu próximo gran paso digital</Link>.
                                 </p>
                             </div>
                         </div>
@@ -148,7 +166,7 @@ const About: React.FC = () => {
                                 </div>
                                 <div className="md:col-span-3">
                                     <p className="text-text-dark/80 text-lg mb-6 leading-relaxed">
-                                        Con más de <strong className="text-primary">20 años de experiencia</strong> en el sector tecnológico, Milton es el fundador y arquitecto detrás de Dunatech. Su enfoque combina visión estratégica con implementación práctica, especializando su experiencia en la transformación de sistemas legacy y el diseño de soluciones empresariales.
+                                        Con más de <strong className="text-primary">20 años de experiencia</strong> en liderazgo corporativo y desarrollo de software, Milton dirige la estrategia técnica de Dunatech. Su experiencia abarca desde la modernización de sistemas críticos (Legacy) hasta el diseño de arquitecturas escalables para banca y retail.
                                     </p>
                                     <div className="grid sm:grid-cols-2 gap-4">
                                         {[
@@ -259,9 +277,9 @@ const About: React.FC = () => {
                         {/* Stats */}
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-12">
                             {[
-                                { number: '100%', label: 'Satisfacción Cliente', icon: 'sentiment_satisfied' },
+                                { number: '100%', label: 'Propiedad del Código', icon: 'verified' },
                                 { number: '20+', label: 'Años de Experiencia', icon: 'workspace_premium' },
-                                { number: '25+', label: 'Tecnologías Dominadas', icon: 'code' }
+                                { number: 'Top 6', label: 'Finalistas CChC', icon: 'trophy' }
                             ].map((stat, index) => (
                                 <div key={index} className="bg-background-dark/50 p-6 rounded-xl hud-overlay backdrop-blur-sm text-center transform hover:scale-105 transition-all duration-300">
                                     <span className="material-symbols-outlined text-primary text-4xl mb-3 block">{stat.icon}</span>
@@ -280,10 +298,10 @@ const About: React.FC = () => {
                                 {[
                                     { name: 'Desarrollo de Software a Medida', icon: 'code' },
                                     { name: 'Modernización de Sistemas Legacy', icon: 'upgrade' },
-                                    { name: 'Investigación y Diseño UX', icon: 'psychology' },
-                                    { name: 'Quality Assurance & Testing', icon: 'verified' },
-                                    { name: 'Integración de Sistemas', icon: 'account_tree' },
-                                    { name: 'Documentación y Capacitación', icon: 'menu_book' }
+                                    { name: 'Investigación UX y Accesibilidad', icon: 'psychology' },
+                                    { name: 'Quality Assurance (QA) Integral', icon: 'verified' },
+                                    { name: 'Integraciones Bancarias y WMS', icon: 'account_tree' },
+                                    { name: 'Inteligencia Artificial Aplicada', icon: 'smart_toy' }
                                 ].map((spec, index) => (
                                     <div key={index} className="flex items-start gap-4 bg-background-dark/30 p-4 rounded-lg border border-primary/20 hover:border-primary/40 transition-colors">
                                         <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">

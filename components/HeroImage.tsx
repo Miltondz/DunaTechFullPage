@@ -19,7 +19,7 @@ const HeroImage: React.FC = () => {
                             <div className="relative aspect-[16/9] sm:aspect-[21/9] w-full overflow-hidden rounded-lg">
                                 {!imageError ? (
                                     <img 
-                                        src="/images/main.jpg" 
+                                        src="/images/landing001.png" 
                                         alt="Arquitectura de soluciones tecnológicas Dunatech - Desarrollo de software a medida, aplicaciones web personalizadas y sistemas integrados para empresas en Chile"
                                         className="w-full h-full object-cover object-center"
                                         onError={() => setImageError(true)}

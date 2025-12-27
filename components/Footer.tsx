@@ -64,10 +64,11 @@ const Footer: React.FC = () => {
                         <div>
                             <h3 className="font-display text-base font-semibold text-text-dark mb-3">Aplicaciones</h3>
                             <ul className="space-y-1.5 text-xs text-text-dark/70">
+                                <li><Link to="/aplicaciones" className="hover:text-primary transition-colors">PREVIO</Link></li>
+                                <li><Link to="/aplicaciones" className="hover:text-primary transition-colors">RehabiliA</Link></li>
                                 <li><Link to="/aplicaciones" className="hover:text-primary transition-colors">CanvasDesk</Link></li>
                                 <li><Link to="/aplicaciones" className="hover:text-primary transition-colors">urlz.lat</Link></li>
                                 <li><Link to="/aplicaciones" className="hover:text-primary transition-colors">AutoTaller Pro</Link></li>
-                                <li><Link to="/aplicaciones" className="hover:text-primary transition-colors">Web Profesor</Link></li>
                                 <li><Link to="/aplicaciones" className="hover:text-primary transition-colors">¿Cuánto Me Toca?</Link></li>
                             </ul>
                         </div>

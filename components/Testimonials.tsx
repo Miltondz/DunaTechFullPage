@@ -1,77 +1,70 @@
 
 import React from 'react';
 
-interface TestimonialCardProps {
-    name: string;
-    role: string;
-    company: string;
+interface MilestoneCardProps {
+    title: string;
+    event: string;
+    achievement: string;
     content: string;
-    rating: number;
-    imageInitials: string;
+    icon: string;
+    color: string;
 }
 
-const TestimonialCard: React.FC<TestimonialCardProps> = ({ name, role, company, content, rating, imageInitials }) => (
+const MilestoneCard: React.FC<MilestoneCardProps> = ({ title, event, achievement, content, icon, color }) => (
     <article className="bg-background-dark/50 p-8 rounded-xl hud-overlay backdrop-blur-sm transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20 flex flex-col h-full">
-        {/* Rating Stars */}
-        <div className="flex gap-1 mb-4" aria-label={`${rating} de 5 estrellas`}>
-            {[...Array(5)].map((_, i) => (
-                <span 
-                    key={i} 
-                    className={`material-symbols-outlined text-2xl ${i < rating ? 'text-primary' : 'text-text-dark/20'}`}
-                >
-                    star
-                </span>
-            ))}
+        {/* Icon Header */}
+        <div className="flex items-center gap-4 mb-6">
+            <div className={`w-16 h-16 bg-${color}/20 rounded-xl flex items-center justify-center flex-shrink-0`}>
+                <span className={`material-symbols-outlined text-${color} text-4xl`}>{icon}</span>
+            </div>
+            <div>
+                <h3 className="text-xl font-bold text-text-dark font-display">{title}</h3>
+                <p className={`text-${color} text-sm font-semibold`}>{achievement}</p>
+            </div>
         </div>
 
-        {/* Testimonial Content */}
+        {/* Content */}
         <blockquote className="flex-grow mb-6">
-            <p className="text-text-dark/90 text-lg leading-relaxed italic">
-                "{content}"
+            <p className="text-text-dark/90 text-base leading-relaxed">
+                {content}
             </p>
         </blockquote>
 
-        {/* Author Info */}
-        <footer className="flex items-center gap-4 mt-auto border-t border-primary/20 pt-6">
-            <div className="w-14 h-14 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
-                <span className="text-primary font-bold text-xl font-display">{imageInitials}</span>
-            </div>
-            <div>
-                <cite className="not-italic">
-                    <p className="font-display font-bold text-text-dark text-lg">{name}</p>
-                    <p className="text-text-dark/70 text-sm">{role}</p>
-                    <p className="text-primary text-sm font-semibold">{company}</p>
-                </cite>
+        {/* Event Info */}
+        <footer className="border-t border-primary/20 pt-4">
+            <div className="flex items-center gap-2">
+                <span className="material-symbols-outlined text-primary text-lg">event</span>
+                <p className="text-text-dark/70 text-sm font-display">{event}</p>
             </div>
         </footer>
     </article>
 );
 
 const Testimonials: React.FC = () => {
-    const testimonials: TestimonialCardProps[] = [
+    const milestones: MilestoneCardProps[] = [
         {
-            name: "Carlos Méndez",
-            role: "CTO",
-            company: "TechVision Corp",
-            content: "Dunatech transformó completamente nuestra infraestructura de datos. Su enfoque proactivo y expertise técnico nos permitió escalar de manera eficiente y segura.",
-            rating: 5,
-            imageInitials: "CM"
+            title: "PREVIO",
+            event: "CChC - #TenemosQueInnovar2026",
+            achievement: "Top 6 Finalistas Nacionales",
+            content: "Finalistas Nacionales en el desafío de seguridad de la Cámara Chilena de la Construcción. Nuestra plataforma de gestión de SSO con IA fue reconocida entre las soluciones más innovadoras del sector construcción en Chile.",
+            icon: "verified_user",
+            color: "primary"
         },
         {
-            name: "María Rodríguez",
-            role: "Directora de Innovación",
-            company: "InnovatePro",
-            content: "El equipo de Dunatech no solo entregó una solución técnica excepcional, sino que se convirtieron en partners estratégicos de nuestro negocio. Altamente recomendados.",
-            rating: 5,
-            imageInitials: "MR"
+            title: "RehabiliA",
+            event: "Emprende Tu Mente 2025 - La Bendita IA",
+            achievement: "Desarrolladores con Impacto Social",
+            content: "Participación destacada en la Hackathon de IA de Emprende Tu Mente Day 2025, creando soluciones tecnológicas innovadoras para la Teletón. Nuestra plataforma de rehabilitación domiciliaria híbrida combina gamificación con seguimiento clínico profesional.",
+            icon: "favorite",
+            color: "light-blue"
         },
         {
-            name: "Jorge Ramírez",
-            role: "CEO",
-            company: "Digital Solutions RD",
-            content: "La arquitectura de sistemas que diseñaron superó nuestras expectativas. Su capacidad para anticipar necesidades futuras demuestra un conocimiento profundo del sector.",
-            rating: 5,
-            imageInitials: "JR"
+            title: "CanvasDesk",
+            event: "World's Largest Hackathon - Bolt",
+            achievement: "Competidores Globales",
+            content: "Participación en el World's Largest Hackathon organizado por Bolt, compitiendo a nivel global con nuestra herramienta de pensamiento visual. CanvasDesk representa nuestra visión de productividad fluida en un lienzo infinito.",
+            icon: "public",
+            color: "light-green"
         }
     ];
 
@@ -82,26 +75,26 @@ const Testimonials: React.FC = () => {
                     {/* Section Header */}
                     <header className="text-center mb-16">
                         <h2 className="text-4xl md:text-5xl font-bold text-dark-blue dark:text-text-dark mb-6 font-display animate-glow">
-                            Lo Que Dicen Nuestros <span className="text-primary">Clientes</span>
+                            Hitos de <span className="text-primary">Validación</span>
                         </h2>
                         <p className="text-xl text-gris-grafito dark:text-text-dark/70 max-w-3xl mx-auto">
-                            La confianza de nuestros clientes es nuestro mayor logro. Conoce sus experiencias trabajando con nosotros.
+                            No solo proyectamos soluciones; las ponemos a prueba en los escenarios más exigentes.
                         </p>
                     </header>
 
-                    {/* Testimonials Grid */}
+                    {/* Milestones Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {testimonials.map((testimonial, index) => (
-                            <TestimonialCard key={index} {...testimonial} />
+                        {milestones.map((milestone, index) => (
+                            <MilestoneCard key={index} {...milestone} />
                         ))}
                     </div>
 
-                    {/* Trust Badge */}
+                    {/* Innovation Badge */}
                     <div className="mt-16 text-center">
                         <div className="inline-flex items-center gap-2 bg-primary/10 backdrop-blur-sm px-6 py-3 rounded-full border border-primary/30">
-                            <span className="material-symbols-outlined text-primary text-2xl">verified</span>
+                            <span className="material-symbols-outlined text-primary text-2xl">emoji_events</span>
                             <p className="text-text-dark font-display font-semibold">
-                                +50 Proyectos Exitosos Entregados
+                                Innovación Validada en Competencias Nacionales e Internacionales
                             </p>
                         </div>
                     </div>

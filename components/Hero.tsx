@@ -57,20 +57,20 @@ const Hero: React.FC = () => {
                         {/* Indicadores de confianza - Social proof rápido */}
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 max-w-4xl mx-auto mt-12">
                             <div className="bg-background-dark/50 backdrop-blur-sm rounded-lg p-4 border border-primary/20">
+                                <div className="text-3xl md:text-4xl font-bold text-primary font-heading">Top 6</div>
+                                <div className="text-sm md:text-base text-text-dark/70 font-display">Finalistas Nac. CChC</div>
+                            </div>
+                            <div className="bg-background-dark/50 backdrop-blur-sm rounded-lg p-4 border border-primary/20">
+                                <div className="text-3xl md:text-4xl font-bold text-light-blue font-heading">20+</div>
+                                <div className="text-sm md:text-base text-text-dark/70 font-display">Años Ingeniería</div>
+                            </div>
+                            <div className="bg-background-dark/50 backdrop-blur-sm rounded-lg p-4 border border-primary/20">
+                                <div className="text-3xl md:text-4xl font-bold text-light-green font-heading">6+</div>
+                                <div className="text-sm md:text-base text-text-dark/70 font-display">Apps en Portafolio</div>
+                            </div>
+                            <div className="bg-background-dark/50 backdrop-blur-sm rounded-lg p-4 border border-primary/20">
                                 <div className="text-3xl md:text-4xl font-bold text-primary font-heading">100%</div>
-                                <div className="text-sm md:text-base text-text-dark/70 font-display">Satisfacción</div>
-                            </div>
-                            <div className="bg-background-dark/50 backdrop-blur-sm rounded-lg p-4 border border-primary/20">
-                                <div className="text-3xl md:text-4xl font-bold text-light-blue font-heading">100%</div>
-                                <div className="text-sm md:text-base text-text-dark/70 font-display">Profesional</div>
-                            </div>
-                            <div className="bg-background-dark/50 backdrop-blur-sm rounded-lg p-4 border border-primary/20">
-                                <div className="text-3xl md:text-4xl font-bold text-light-green font-heading">5+</div>
-                                <div className="text-sm md:text-base text-text-dark/70 font-display">Años Exp.</div>
-                            </div>
-                            <div className="bg-background-dark/50 backdrop-blur-sm rounded-lg p-4 border border-primary/20">
-                                <div className="text-3xl md:text-4xl font-bold text-primary font-heading">13+</div>
-                                <div className="text-sm md:text-base text-text-dark/70 font-display">Años Exp.</div>
+                                <div className="text-sm md:text-base text-text-dark/70 font-display">Propiedad del Código</div>
                             </div>
                         </div>
                     </div>

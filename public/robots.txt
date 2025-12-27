@@ -1,5 +1,6 @@
 # robots.txt para Dunatech
-# Última actualización: 2025-01-06
+# Última actualización: 2025-12-26
+# Optimizado para SEO + GEO (Generative Engine Optimization)
 
 # Permitir acceso a todos los bots
 User-agent: *
@@ -10,6 +11,7 @@ Allow: /sobre-nosotros
 Allow: /servicios
 Allow: /aplicaciones
 Allow: /contacto
+Allow: /blog
 
 # Bloquear acceso a archivos y directorios de desarrollo
 Disallow: /admin/
@@ -37,6 +39,10 @@ Allow: /*.webp
 Allow: /*.gif
 Allow: /*.woff
 Allow: /*.woff2
+
+# ============================================
+# MOTORES DE BÚSQUEDA TRADICIONALES
+# ============================================
 
 # Google Bot
 User-agent: Googlebot
@@ -66,7 +72,63 @@ Crawl-delay: 2
 User-agent: DuckDuckBot
 Allow: /
 
-# Bloquear bots maliciosos comunes
+# ============================================
+# BOTS DE IA GENERATIVA (GEO - 2025)
+# Permitimos que los LLMs rastreen y citen nuestro contenido
+# ============================================
+
+# OpenAI GPTBot - ChatGPT
+User-agent: GPTBot
+Allow: /
+
+# OpenAI ChatGPT User
+User-agent: ChatGPT-User
+Allow: /
+
+# Google AI (Gemini, Bard)
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic Claude
+User-agent: anthropic-ai
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-Web
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Microsoft Copilot / Bing AI
+User-agent: Copilot
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# Applebot (Siri, Apple Intelligence)
+User-agent: Applebot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+
+# Amazon/Alexa
+User-agent: Amazonbot
+Allow: /
+
+# ============================================
+# BOTS MALICIOSOS O DE SCRAPING (BLOQUEADOS)
+# ============================================
+
 User-agent: MJ12bot
 Disallow: /
 
@@ -82,10 +144,17 @@ Disallow: /
 User-agent: Bytespider
 Disallow: /
 
-# Sitemap locations
+User-agent: PetalBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+# ============================================
+# SITEMAPS Y HOST
+# ============================================
+
 Sitemap: https://dunatech.com/sitemap.xml
-Sitemap: https://dunatech.com/sitemap-pages.xml
-Sitemap: https://dunatech.com/sitemap-images.xml
 
 # Host (preferencia de dominio)
 Host: https://dunatech.com

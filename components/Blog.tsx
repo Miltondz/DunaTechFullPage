@@ -98,8 +98,13 @@ const BlogCard: React.FC<{ article: BlogArticle }> = ({ article }) => {
 };
 
 const Blog: React.FC = () => {
-    const featuredArticles = blogArticles.filter(article => article.featured);
-    const regularArticles = blogArticles.filter(article => !article.featured);
+    // Sort articles by date (newest first)
+    const sortedArticles = [...blogArticles].sort((a, b) => 
+        new Date(b.date).getTime() - new Date(a.date).getTime()
+    );
+    
+    const featuredArticles = sortedArticles.filter(article => article.featured);
+    const regularArticles = sortedArticles.filter(article => !article.featured);
 
     return (
         <section className="pb-24 sm:pb-32" aria-labelledby="blog-heading">

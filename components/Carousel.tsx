@@ -4,7 +4,7 @@ import { CarouselSlide } from '../types';
 const slides: CarouselSlide[] = [
     {
         id: 1,
-        imageUrl: "/images/Software_a_la_medida.jpg",
+        imageUrl: "/images/servicios001.png",
         title: "Desarrollo de Software a Medida",
         description: "Desarrollo de aplicaciones web, de escritorio y móviles personalizadas. Modernización de código legacy VB6 a .NET. Prototipado rápido para validar ideas antes de invertir.",
         alt: "Desarrollo de software a medida para empresas en Chile - Aplicaciones web y móviles personalizadas | Dunatech"

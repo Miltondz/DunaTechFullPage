@@ -30,7 +30,7 @@ const ScrollToTopButton: React.FC = () => {
             type="button"
             onClick={scrollToTop}
             className={`
-                fixed bottom-8 right-8 z-50 p-3 rounded-full 
+                fixed bottom-4 right-4 sm:bottom-8 sm:right-8 z-50 p-2 sm:p-3 rounded-full 
                 bg-primary/80 text-white backdrop-blur-sm
                 hud-overlay
                 transition-all duration-300 ease-in-out
@@ -41,7 +41,7 @@ const ScrollToTopButton: React.FC = () => {
             aria-label="Volver arriba"
             title="Volver arriba"
         >
-            <span className="material-symbols-outlined text-3xl leading-none">
+            <span className="material-symbols-outlined text-2xl sm:text-3xl leading-none">
                 rocket_launch
             </span>
         </button>
