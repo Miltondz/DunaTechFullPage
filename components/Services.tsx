@@ -19,6 +19,7 @@ interface ServiceDetail {
 
 const Services: React.FC = () => {
     const [selectedService, setSelectedService] = useState<number>(0);
+    const [showBrochureModal, setShowBrochureModal] = useState(false);
 
     const servicesData: ServiceDetail[] = [
         {
@@ -425,7 +426,7 @@ const Services: React.FC = () => {
                                     Solicitar Consultoría
                                 </Link>
                                 <button 
-                                    onClick={() => alert('Brochure estará disponible próximamente')}
+                                    onClick={() => setShowBrochureModal(true)}
                                     className="inline-flex items-center justify-center border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-lg py-4 px-8 font-bold transition-all duration-300 hover:scale-105 text-lg"
                                 >
                                     <span className="material-symbols-outlined mr-2">download</span>
@@ -587,6 +588,71 @@ const Services: React.FC = () => {
                     }
                 ]}
             />
+
+            {/* Brochure Modal */}
+            {showBrochureModal && (
+                <div 
+                    className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-background-dark/90 backdrop-blur-md animate-[fadeIn_0.3s_ease-out]"
+                    onClick={() => setShowBrochureModal(false)}
+                >
+                    <div 
+                        className="relative max-w-lg w-full bg-background-dark/50 border-2 border-primary/30 rounded-2xl p-8 hud-overlay shadow-2xl shadow-primary/20 animate-[scaleIn_0.3s_ease-out]"
+                        onClick={e => e.stopPropagation()}
+                    >
+                        {/* Close Button */}
+                        <button 
+                            onClick={() => setShowBrochureModal(false)}
+                            className="absolute top-4 right-4 text-text-dark/50 hover:text-primary transition-colors"
+                        >
+                            <span className="material-symbols-outlined text-3xl">close</span>
+                        </button>
+
+                        <div className="text-center">
+                            <div className="w-20 h-20 bg-primary/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                <span className="material-symbols-outlined text-primary text-5xl">menu_book</span>
+                            </div>
+                            
+                            <h3 className="text-3xl font-bold text-text-dark font-display mb-4">
+                                Brochure <span className="text-primary">Dunatech</span>
+                            </h3>
+                            
+                            <p className="text-text-dark/70 text-lg leading-relaxed mb-8">
+                                Estamos finalizando nuestro brochure 2025 para incluir todos los nuevos hitos y servicios.
+                            </p>
+
+                            <div className="bg-primary/10 border border-primary/30 rounded-xl p-6 mb-8 text-left">
+                                <p className="text-primary font-bold font-display mb-2 flex items-center gap-2">
+                                    <span className="material-symbols-outlined">info</span>
+                                    ¿Lo necesitas ahora?
+                                </p>
+                                <p className="text-text-dark/80 text-sm">
+                                    Si requieres información inmediata o una presentación personalizada, nuestro equipo de soporte puede enviarte una versión preliminar hoy mismo.
+                                </p>
+                            </div>
+
+                            <div className="flex flex-col gap-4">
+                                <Link 
+                                    to="/contacto" 
+                                    className="bg-primary text-white font-bold py-4 px-6 rounded-lg hover:bg-light-blue transition-all duration-300 flex items-center justify-center gap-2"
+                                >
+                                    <span className="material-symbols-outlined">mail</span>
+                                    Solicitar por Email
+                                </Link>
+                                <button 
+                                    onClick={() => setShowBrochureModal(false)}
+                                    className="text-text-dark/50 hover:text-text-dark font-semibold text-sm transition-colors"
+                                >
+                                    Entendido, volver
+                                </button>
+                            </div>
+                        </div>
+
+                        {/* Decorative HUD corners */}
+                        <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-primary/40 rounded-tl-2xl"></div>
+                        <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-primary/40 rounded-br-2xl"></div>
+                    </div>
+                </div>
+            )}
         </>
     );
 };
